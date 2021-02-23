@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>Productos .::MicroIMPLANT::.</title>
+  </head>
+  <body style="font-family: 'Roboto', sans-serif">
+    <header
+      class="flex w-full h-16 items-center fixed z-10"
+      style="
+        background: linear-gradient(
+          0.15turn,
+          rgb(1, 97, 145),
+          rgb(19, 172, 248)
+        );
+        border-bottom: solid rgb(102, 203, 243) 2px;
+      "
+    >
+      <div
+        class="h-16 w-16 flex items-center justify-center"
+        style="border-right: double rgb(102, 203, 243) 3px; border-radius: 10px"
+      >
+        <img class="mx-1 h-11 w-11" src="./assets/logo.png" alt="" />
+      </div>
+      <div class="h-12 text-white text-3xl mx-3">
+        <p>MICRO<strong>IMPLANT</strong></p>
+        <span class="text-xs"><p>Insumos Médicos</p></span>
+      </div>
+      <div
+        class="hamburguer ml-2 h-11 w-10 rounded-sm overflow-hidden flex flex-col ml-auto pr-12"
+      >
+        <div class="abrirMenu h-11 w-10 duration-1000">
+          <div class="but1"></div>
+          <div class="but2"></div>
+          <div class="but3"></div>
+        </div>
+        <div
+          class="cerrarMenu h-11 w-10 flex items-center justify-center text-xl text-white bg-gray-600 opacity-90"
+        >
+          X
+        </div>
+      </div>
+    </header>
+
+    <ul
+      id="menu"
+      class="w-full text-white flex flex-col opacity-90 fixed mt-16 max-h-0 overflow-hidden duration-500 z-10"
+    >
+      <a href="./home.html"
+        ><li
+          class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
+        >
+          HOME
+        </li></a
+      >
+      <a href="./institucional.html"><li
+        class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
+      >
+        INSTITUCIONAL
+      </li></a>
+      <a href="./productos.html"
+        ><li
+          class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
+        >
+          PRODUCTOS
+        </li></a
+      >
+      <a href="./contacto.html"><li class="bg-gray-800 h-12 items-center flex pl-2">CONTACTO</li></a>
+    </ul>
+    <div class="h-16 w-full"></div><!--Div que tuve que poner porque header tapa lo que haya debajo (porque es position fixed) pero si le pongo margin o padding al de abajo, mueve el header-->
+    <div class="flex items-center w-full h-8 bg-gray-800 text-blue-300 pl-2 mb-2">
+      Catálogo de Productos
+    </div>
+
+
+    <div class="h-42 w-full flex items-center justify-center">
+      <div
+        class="h-40 w-2/5 bg-gray-200 rounded-xl m-2 flex justify-center flex-col items-center"
+        style="box-shadow: 2px 1px 3px gray;"
+      ><a href="./productos/cabeza.html">
+        <img class="h-32 w-32 mb-2" src="./assets/trau.png" alt="" />
+        <div class="text-sm text-center">CABEZA</div>
+      </a></div>
+      <div class="h-40 w-2/5 bg-gray-200 rounded-xl m-2 flex justify-center flex-col items-center "
+      style="box-shadow: 2px 1px 3px gray;"
+      >
+        <img class="h-32 w-32 mb-2" src="./assets/trau.png" alt="" />
+        <div class="text-sm">COLUMNA</div>
+      </div>
+    </div>
+    <div class="h-42 w-full flex items-center justify-center">
+        <div
+          class="h-40 w-2/5 bg-gray-200 rounded-xl m-2 flex justify-center flex-col items-center "
+          style="box-shadow: 2px 1px 3px gray;"
+        >
+          <img class="h-32 w-32 mb-2" src="./assets/trau.png" alt="" />
+          <div class="text-sm">RODILLA</div>
+        </div>
+        <div
+          class="h-40 w-2/5 bg-gray-200 rounded-xl m-2 flex justify-center flex-col items-center "
+          style="box-shadow: 2px 1px 3px gray;"
+        >
+          <img class="h-32 w-32 mb-2" src="./assets/trau.png" alt="" />
+          <div class="text-sm">CADERA</div>
+        </div>
+      </div>   <div class="h-42 w-full flex items-center justify-center">
+        <div
+          class="h-40 w-2/5 bg-gray-200 rounded-xl m-2 flex justify-center flex-col items-center "
+          style="box-shadow: 2px 1px 3px gray;"
+        >
+          <img class="h-32 w-32 mb-2" src="./assets/trau.png" alt="" />
+          <div class="text-sm">MIEMBRO SUPERIOR</div>
+        </div>
+        <div
+          class="h-40 w-2/5 bg-gray-200 rounded-xl m-2 flex justify-center flex-col items-center "
+          style="box-shadow: 2px 1px 3px gray;"
+        >
+          <img class="h-32 w-32 mb-2" src="./assets/trau.png" alt="" />
+          <div class="text-sm">MIEMBRO INFERIOR</div>
+        </div>
+      </div>
+    </p>
+    <script src="./main.js"></script>
+  </body>
+</html>
