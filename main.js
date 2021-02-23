@@ -1,25 +1,13 @@
 const hamburguer = document.querySelector(".hamburguer");
 const abrirMenu = document.querySelector(".abrirMenu");
-const cerrarMenu = document.querySelector(".cerrarMenu");
 const menu = document.querySelector("#menu");
 
 function openMenu() {
-  if (menu.classList.contains("max-h-0")) {
-    abrirMenu.classList.add("max-h-0");
-    abrirMenu.classList.add("overflow-hidden");
-    menu.style.maxHeight = 50 + "rem";
-  }
-}
-
-function closeMenu() {
-  menu.classList.add("overflow-hidden");
-  menu.style.maxHeight = 0;
-  abrirMenu.classList.remove("max-h-0");
-  abrirMenu.classList.remove("overflow-hidden");
+  abrirMenu.classList.toggle("opened");
+  menu.style.maxHeight = abrirMenu.classList.contains("opened") ? "50rem" : 0;
 }
 
 abrirMenu.addEventListener("click", openMenu);
-cerrarMenu.addEventListener("click", closeMenu);
 
 function cambiarPalabras() {
   const palabrasFoto = [

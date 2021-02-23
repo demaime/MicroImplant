@@ -3,37 +3,56 @@
   --primary-color-dark: rgb(1, 97, 145);
 }
 
+.abrirMenu > div {
+  transition: all 0.25s;
+}
+
+.abrirMenu.opened .but2 {
+  opacity: 0;
+}
+
+.abrirMenu.opened .but1 {
+  transform: translateY(12px) rotateZ(45deg);
+}
+
+.abrirMenu.opened .but3 {
+  transform: translateY(-12px) rotateZ(-45deg);
+}
+
 .abrirMenu:hover {
-  background-color: rgb(1, 97, 145);
+  background-color: var(--primary-color-dark);
 }
 .abrirMenu:hover .but1,
 .but2,
 .but3 {
   border: solid var(--primary-color) 2px;
+  background-color: var(--primary-color-dark);
 }
 .abrirMenu:hover .but2 {
-  border: solid rgb(19, 172, 248) 2px;
+  border: solid var(--primary-color) 2px;
+  background-color: var(--primary-color-dark);
 }
 .abrirMenu:hover .but3 {
-  border: solid rgb(19, 172, 248) 2px;
+  border: solid var(--primary-color) 2px;
+  background-color: var(--primary-color-dark);
 }
 
 .but1,
 .but2,
 .but3 {
+  height: 2px;
   width: 2rem;
-  border: solid rgb(1, 97, 145) 2px;
-  background-color: rgb(1, 97, 145);
+  border: solid var(--primary-color-dark) 2px;
+  background-color: var(--primary-color-dark);
   border-radius: 2px;
   transition: all 0.5s;
 }
 .but1,
 .but3 {
-  height: 3px;
   margin: 0.5rem 0.25rem;
 }
 .but2 {
-  height: 1px;
+  opacity: 1; /* sacar */
   margin: 0.25rem 0.25rem;
 }
 
@@ -54,7 +73,6 @@
   user-select: none;
   cursor: pointer;
   transition: all 0.2s;
-  transform: scale(0.98);
   will-change: transform;
   position: relative;
   font-size: 0;
