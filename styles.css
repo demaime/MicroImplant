@@ -1,10 +1,15 @@
+:root {
+  --primary-color: rgb(19, 172, 248);
+  --primary-color-dark: rgb(1, 97, 145);
+}
+
 .abrirMenu:hover {
   background-color: rgb(1, 97, 145);
 }
 .abrirMenu:hover .but1,
 .but2,
 .but3 {
-  border: solid rgb(19, 172, 248) 2px;
+  border: solid var(--primary-color) 2px;
 }
 .abrirMenu:hover .but2 {
   border: solid rgb(19, 172, 248) 2px;
@@ -12,23 +17,26 @@
 .abrirMenu:hover .but3 {
   border: solid rgb(19, 172, 248) 2px;
 }
+
 .but1,
+.but2,
 .but3 {
   width: 2rem;
-  height: 3px;
   border: solid rgb(1, 97, 145) 2px;
-  margin: 0.5rem 0.25rem;
+  background-color: rgb(1, 97, 145);
   border-radius: 2px;
   transition: all 0.5s;
+}
+.but1,
+.but3 {
+  height: 3px;
+  margin: 0.5rem 0.25rem;
 }
 .but2 {
-  width: 2rem;
   height: 1px;
-  border: solid rgb(1, 97, 145) 2px;
   margin: 0.25rem 0.25rem;
-  border-radius: 2px;
-  transition: all 0.5s;
 }
+
 #contenedor-palabras-foto {
   animation: pulse 4s infinite;
 }
