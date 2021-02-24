@@ -1,17 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>Productos .::MicroIMPLANT::.</title>
   </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore soluta
-      fugiat dolores totam cumque, repellat architecto consectetur fuga rerum?
-      Magni quod accusamus aut perferendis aliquid nisi voluptatum, ut
-      reiciendis cupiditate.
-    </p>
+  <body style="font-family: 'Roboto', sans-serif">
+    <header
+      class="flex w-full h-16 items-center fixed z-10"
+      style="
+        background: linear-gradient(
+          0.15turn,
+          rgb(1, 97, 145),
+          rgb(19, 172, 248)
+        );
+        border-bottom: solid rgb(102, 203, 243) 2px;
+      "
+    >
+      <a href="../home.html"
+        ><div
+          class="h-16 w-16 flex items-center justify-center"
+          style="
+            border-right: double rgb(102, 203, 243) 3px;
+            border-radius: 10px;
+          "
+        >
+          <img class="mx-1 h-11 w-11" src="../assets/logo.png" alt="" /></div
+      ></a>
+      <div class="h-12 text-white text-3xl mx-3">
+        <p>MICRO<strong>IMPLANT</strong></p>
+        <span class="text-xs"><p>Insumos Médicos</p></span>
+      </div>
+      <div
+        class="hamburguer ml-2 h-11 w-10 rounded-sm overflow-hidden flex flex-col ml-auto pr-12"
+      >
+        <div class="abrirMenu h-11 w-10 duration-1000">
+          <div class="but1"></div>
+          <div class="but2"></div>
+          <div class="but3"></div>
+        </div>
+      </div>
+    </header>
+    <ul
+      id="menu"
+      class="w-full text-white flex flex-col opacity-90 fixed mt-16 max-h-0 overflow-hidden duration-500 z-10"
+    >
+      <a href="../home.html"
+        ><li
+          class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
+        >
+          HOME
+        </li></a
+      >
+      <a href="../institucional.html"
+        ><li
+          class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
+        >
+          INSTITUCIONAL
+        </li></a
+      >
+      <a href="../productos.html"
+        ><li
+          class="bg-gray-500 h-12 items-center flex pl-2 border-b border-gray-400"
+        >
+          PRODUCTOS
+        </li></a
+      >
+      <a href="../contacto.html"
+        ><li class="bg-gray-800 h-12 items-center flex pl-2">CONTACTO</li></a
+      >
+    </ul>
+    <div class="h-16 w-full"></div>
+    <!--Div que tuve que poner porque header tapa lo que haya debajo (porque es position fixed) pero si le pongo margin o padding al de abajo, mueve el header-->
+    <div
+      class="flex items-center justify-between w-full h-8 bg-gray-800 text-blue-300 px-2"
+    >
+      <p class=>Catálogo de Productos</p>
+      <a href="../productos.html">
+      <p class="text-xs text-blue-200"><em>Volver al catálogo</em></p></a>
+    </div>
+    <div class="flex items-center justify-center font-semibold h-12 w-full bg-blue-300">
+      <img class="h-8 w-8 mx-2" src="../assets/cabeza.png" alt="">
+      CABEZA
+    </div>
+    <div class="grid h-auto w-full" style="grid-template-columns: 1fr 3fr;">
+      <div class="bg-gray-800 flex flex-col text-blue-200 pl-2 text-xs">
+        <div>Producto 1</div>
+        <div>Producto 2</div>
+        <div>Producto 3</div>
+        <div>Producto 4</div>
+        <div>Producto 5</div>
+        <div>Producto 6</div>
+        <div>Producto 7</div>
+        <div>Producto 8</div>
+        <div>Producto 9</div>
+        <div>Producto 1</div>
+        <div>Producto 2</div>
+        <div>Producto 3</div>
+        <div>Producto 4</div>
+        <div>Producto 5</div>
+        <div>Producto 6</div>
+        <div>Producto 7</div>
+        <div>Producto 8</div>
+        <div>Producto 9</div>
+      </div>
+      <div class="bg-gray-200"></div>
+    </div>
+    <script src="../main.js"></script>
   </body>
 </html>
