@@ -99,7 +99,7 @@
   transform: scaleX(1.31) rotateY(-40deg);
 }
 #ver-todos {
-  animation: boing 1.5s infinite;
+  animation: boing 0.5s infinite;
 }
 
 @keyframes pulse {
