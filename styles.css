@@ -57,7 +57,7 @@
 }
 
 #contenedor-palabras-foto {
-  animation: pulse 4s infinite;
+  animation: pulse 3s infinite;
 }
 .blue-back {
   background-color: rgb(1, 97, 145);
@@ -98,6 +98,9 @@
 .item:nth-child(odd) {
   transform: scaleX(1.31) rotateY(-40deg);
 }
+#ver-todos {
+  animation: boing 1.5s infinite;
+}
 
 @keyframes pulse {
   0% {
@@ -127,4 +130,27 @@ a {
 }
 a:visited {
   text-decoration: none;
+}
+
+@keyframes boing {
+  0% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
+}
+@-webkit-keyframes boing {
+  0% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
 }

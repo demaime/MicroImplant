@@ -1,10 +1,21 @@
 const hamburguer = document.querySelector(".hamburguer");
 const abrirMenu = document.querySelector(".abrirMenu");
+const cerrarMenu = document.querySelector(".cerrarMenu");
 const menu = document.querySelector("#menu");
 
 function openMenu() {
   abrirMenu.classList.toggle("opened");
   menu.style.maxHeight = abrirMenu.classList.contains("opened") ? "50rem" : 0;
+  if (abrirMenu.classList.contains("opened")) {
+    document.body.addEventListener("click", closeMenu);
+  }
+
+  function closeMenu() {
+    console.log("holi");
+    // menu.classList.add("overflow-hidden");
+    // menu.style.maxHeight = 0;
+    // abrirMenu.classList.toggle("opened");
+  }
 }
 
 abrirMenu.addEventListener("click", openMenu);
