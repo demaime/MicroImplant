@@ -28,12 +28,16 @@
         border-bottom: solid rgb(102, 203, 243) 2px;
       "
     >
-      <div
-        class="h-16 w-16 flex items-center justify-center"
-        style="border-right: double rgb(102, 203, 243) 3px; border-radius: 10px"
-      >
-        <img class="mx-1 h-11 w-11" src="./assets/logo.png" alt="" />
-      </div>
+      <a href="./home.html"
+        ><div
+          class="h-16 w-16 flex items-center justify-center"
+          style="
+            border-right: double rgb(102, 203, 243) 3px;
+            border-radius: 10px;
+          "
+        >
+          <img class="mx-1 h-11 w-11" src="./assets/logo.png" alt="" /></div
+      ></a>
       <div class="h-12 text-white text-3xl mx-3">
         <p>MICRO<strong>IMPLANT</strong></p>
         <span class="text-xs"><p>Insumos Médicos</p></span>
@@ -80,7 +84,7 @@
         </li></a
       >
       <a href="./contacto.html"
-        ><li class="bg-gray-800 h-12 items-center flex pl-2">CONTACTO</li></a
+        ><li class="bg-gray-500 h-12 items-center flex pl-2">CONTACTO</li></a
       >
     </ul>
     <div class="h-16 w-full"></div>
@@ -90,6 +94,41 @@
     >
       Contacto
     </div>
+    <p class="p-1 w-full"><strong>Microimplant S.A.</strong></p>
+    <p class="p-1 w-full">Av. Cabildo 4439/47 Piso 8 -C.P. 1429- C.A.B.A</p>
+    <p class="p-1 w-full"><em>microimplant@microimplant.com.ar</em></p>
+    <p class="p-1 w-full">
+      <strong>TEL/FAX:</strong>&nbsp(011) 4952-3089/1884 (L a V de 9 a 18 hs)
+    </p>
+    <p class="p-1 w-full"><strong>URGENCIAS:</strong> 15-6988-6741</p>
+    <div class="pb-2 w-full h-30 flex items-center justify-center">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17243.666811418974!2d-58.45858658643997!3d-34.548696474217536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6a2837d765b%3A0x4453017f5147d46b!2sAv.%20Cabildo%204439%2C%20C1429ABC%20CABA!5e0!3m2!1ses!2sar!4v1613592338123!5m2!1ses!2sar"
+        width="350"
+        height="250"
+        frameborder="0"
+        style="border: 0"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </div>
+    <form action="mailto:demianaime@gmail.com" method="POST">
+      <input class="bg-blue-100" type="text" size="20" name="ContactName" />
+      <input class="bg-blue-100" type="text" size="50" name="Message" />
+      <input class="bg-blue-100" type="submit" value="Submit" />
+    </form>
+
+    <!-- 
+
+    <form action="mailto:demianaime@gmail.com"
+          method=”POST”
+          enctype=”multipart/form-data”
+          name=”EmailForm”>Name:<br>
+          <input type=”text” size=”19″ name=”ContactName”><br><br>
+          Message:<br> <textarea name=”ContactCommentt” rows=”6″ cols=”20″>
+          </textarea><br><br> <input type="submit" value='Submit'> 
+      </form> -->
     <script src="./main.js"></script>
   </body>
 </html>
