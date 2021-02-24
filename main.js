@@ -8,12 +8,12 @@ function openMenu() {
   menu.style.maxHeight = abrirMenu.classList.contains("opened") ? "50rem" : 0;
 }
 
-if (abrirMenu.classList.contains("opened")) {
-  document.body.addEventListener("click", closeMenu);
-}
-function closeMenu() {
-  menu.style.maxHeight = abrirMenu.classList.contains("opened") ? "50rem" : 0;
-}
+// if (abrirMenu.classList.contains("opened")) {
+//   document.body.addEventListener("click", closeMenu);
+// }
+// function closeMenu() {
+//   menu.style.maxHeight = abrirMenu.classList.contains("opened") ? "50rem" : 0;
+// }
 
 abrirMenu.addEventListener("click", openMenu);
 
@@ -30,17 +30,6 @@ function cambiarPalabras() {
     "contenedor-palabras-foto"
   );
   const display = (x) => (contenedorPalabras.innerText = x);
-
-  // function delayLoop(fn, delay) {
-  //   return (x, i) => {
-  //     setTimeout(() => {
-  //       fn(x);
-  //     }, i * delay);
-  //   };
-  // }
-
-  // palabrasFoto.forEach(delayLoop(display, 4000));
-
   let i = 0;
   setInterval(() => {
     const current = palabrasFoto[i];
