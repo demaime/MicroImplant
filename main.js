@@ -19,12 +19,12 @@ abrirMenu.addEventListener("click", openMenu);
 
 function cambiarPalabras() {
   const palabrasFoto = [
+    "Calidad",
     "Excelencia",
     "Calidez",
     "Servicio 24hs",
     "Adaptabilidad",
     "Flexibilidad",
-    "Calidad",
   ];
   const contenedorPalabras = document.getElementById(
     "contenedor-palabras-foto"
@@ -33,7 +33,7 @@ function cambiarPalabras() {
   let i = 0;
   setInterval(() => {
     const current = palabrasFoto[i];
-    if (i < palabrasFoto.length) {
+    if (i <= palabrasFoto.length - 1) {
       display(current);
       i++;
     } else {
