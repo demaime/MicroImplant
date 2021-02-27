@@ -1,5 +1,6 @@
-const stock = [
+const productos = [
   {
+    categoria: "Cabeza",
     nombre: "Chorizo",
     descripcion: "Rico plato de carne y pan",
     medidas: "90x60x90",

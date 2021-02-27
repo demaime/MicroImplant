@@ -2,19 +2,20 @@ const hamburguer = document.querySelector(".hamburguer");
 const abrirMenu = document.querySelector(".abrirMenu");
 const cerrarMenu = document.querySelector(".cerrarMenu");
 const menu = document.querySelector("#menu");
+const productoColumna = document.querySelector("#producto-columna");
+const listaColumna = document.querySelector("#lista-columna");
 
 function openMenu() {
   abrirMenu.classList.toggle("opened");
   menu.style.maxHeight = abrirMenu.classList.contains("opened") ? "50rem" : 0;
 }
-
-// if (abrirMenu.classList.contains("opened")) {
-//   document.body.addEventListener("click", closeMenu);
-// }
-// function closeMenu() {
-//   menu.style.maxHeight = abrirMenu.classList.contains("opened") ? "50rem" : 0;
-// }
-
+function menuColumna() {
+  productoColumna.classList.toggle("opened");
+  listaColumna.style.maxHeight = productoColumna.classList.contains("opened")
+    ? "50rem"
+    : 0;
+}
+productoColumna.addEventListener("click", menuColumna);
 abrirMenu.addEventListener("click", openMenu);
 
 function cambiarPalabras() {
