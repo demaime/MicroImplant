@@ -166,5 +166,18 @@
       </div>
     </div>
     <script src="../main.js"></script>
+    <script>
+      const productoColumna = document.querySelector("#producto-columna");
+      const listaColumna = document.querySelector("#lista-columna");
+      function menuColumna() {
+        productoColumna.classList.toggle("opened");
+        listaColumna.style.maxHeight = productoColumna.classList.contains(
+          "opened"
+        )
+          ? "50rem"
+          : 0;
+      }
+      productoColumna.addEventListener("click", menuColumna);
+    </script>
   </body>
 </html>

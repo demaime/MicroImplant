@@ -102,6 +102,13 @@
   animation: boing 0.5s infinite;
 }
 
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
 @keyframes pulse {
   0% {
     opacity: 0;
@@ -123,13 +130,6 @@
   100% {
     opacity: 0;
   }
-}
-
-a {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
 }
 
 @keyframes boing {
