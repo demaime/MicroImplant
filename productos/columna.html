@@ -127,29 +127,29 @@
       class="max-h-0 overflow-hidden fixed text-center duration-500"
       style="color: rgb(1, 97, 145); font-variant: small-caps"
     >
-      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px gainsboro">
+      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px black">
         sistema fijacion columna lumbar titanio
       </li>
-      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px gainsboro">
+      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px black">
         sistema interespinoso en titanio
       </li>
-      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px gainsboro">
+      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px black">
         sistema interespinoso en peek
       </li>
-      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px gainsboro">
+      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px black">
         sistema de fijacion cage autosustentable cervical con pines de fijacion
         y angulacion 6°
       </li>
-      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px gainsboro">
+      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px black">
         sistema de instrimentacion para columna cervical
       </li>
-      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px gainsboro">
+      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px black">
         sistema de fijacion posterior intersomatica en peek
       </li>
-      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px gainsboro">
+      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px black">
         celda mesh reemplazo vertebral
       </li>
-      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px gainsboro">
+      <li class="bg-white py-1" style="box-shadow: 0px 0px 1px black">
         sustituto oseo en granulos
       </li>
     </ul>
@@ -186,6 +186,7 @@
       const productoColumna = document.querySelector("#producto-columna");
       const listaColumna = document.querySelector("#lista-columna");
       const itemsLista = document.querySelectorAll("#lista-columna li");
+
       function menuColumna() {
         productoColumna.classList.toggle("opened");
         listaColumna.style.maxHeight = productoColumna.classList.contains(
@@ -200,9 +201,7 @@
       }
 
       productoColumna.addEventListener("click", menuColumna);
-      itemsLista.forEach((item) =>
-        item.addEventListener("click", selectItem())
-      );
+      itemsLista.forEach((item) => item.addEventListener("click", selectItem));
     </script>
   </body>
 </html>
