@@ -18,7 +18,7 @@
   </head>
   <body style="font-family: 'Roboto', sans-serif">
     <header
-      class="flex w-full h-16 items-center fixed z-10"
+      class="flex w-full h-16 items-center fixed z-10 lg:h-32"
       style="
         background: linear-gradient(
           0.15turn,
@@ -29,13 +29,13 @@
       "
     >
       <a href="./home.html"><div
-        class="h-16 w-16 flex items-center justify-center"
+        class="h-16 w-16 flex items-center justify-center lg:h-32 lg:w-32"
         style="border-right: double rgb(102, 203, 243) 3px; border-radius: 10px;"
       >
-        <img class="mx-1 h-11 w-11" src="./assets/logo.png" alt="" />
+        <img id="logo" class="h-11 w-11 lg:h-4/5 lg:w-4/5 duration-500" src="./assets/logo.png" alt="" />
       </div></a>
-      <div class="h-12 text-white text-3xl mx-3"><p>
-        MICRO<strong>IMPLANT</strong></p><span class="text-xs"
+      <div class="h-12 text-white text-3xl mx-3 lg:h-32 lg:text-7xl lg:flex lg:flex-col lg:justify-center"><p>
+        MICRO<strong>IMPLANT</strong></p><span class="text-xs lg:text-2xl lg:ml-1"
           ><p>Insumos Médicos</p></span
         >
       </div>
@@ -48,6 +48,7 @@
           
       </div>
     </header>
+    
     <ul id="menu" class="w-full text-white flex flex-col opacity-90 fixed mt-16 max-h-0 overflow-hidden duration-500 z-10">
         <a href="./home.html"><li class="bg-gray-500 h-12 items-center flex pl-2 border-b border-gray-400">HOME</li></a>
         <a href="./institucional.html"><li
@@ -58,18 +59,28 @@
         <a href="./productos.html"><li class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400">PRODUCTOS</li></a>
         <a href="./contacto.html"><li class="bg-gray-800 h-12 items-center flex pl-2">CONTACTO</li></a>
     </ul>
-    <div class="h-72 w-full flex" style="background: url(./assets/quirofano.jpg); background-size: cover;">
-      <div id="contenedor-palabras-foto" class= "w-full h-14 text-white mt-auto flex items-center pl-2 text-3xl font-semibold tracking-wide" style="text-shadow: 1px 1px 4px black;"></div>
+    <nav class="sm:hidden lg:z-10 lg:fixed lg:h-12 lg:w-full lg:bg-gray-700 lg:mt-32 lg:items-center lg:flex lg:border-b lg:border-blue-300 lg:justify-evenly">
+      <a href="./home.html"><div class="hidden lg:block lg:text-blue-300 lg:tracking-wider"><strong>HOME</strong></div></a>
+        <a href="./institucional.html"><div class="hidden lg:block lg:text-white lg:tracking-wider"
+        >
+          INSTITUCIONAL
+        </div></a>
+        <a href="./productos.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">PRODUCTOS</div></a>
+        <a href="./contacto.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">CONTACTO</div></a>
+    </nav>
+    <div id="foto-inicial" class="h-72 w-full flex lg:h-96" style="background: url(./assets/quirofano.jpg); background-size: cover;">
+      <div id="contenedor-palabras-foto" class= "w-full h-14 text-white mt-auto flex items-center pl-2 text-3xl font-semibold tracking-wide lg:text-7xl lg:pb-12" style="text-shadow: 1px 1px 4px black;"></div>
     </div>
-    <div class="w-full flex justify-center py-4"><h1 class="w-11/12 text-justify"><strong><em>Nuestra amplia experiencia nos permite brindar un servicio de excelencia que contempla tanto las necesidades del paciente como las de la prestadora de salud.</strong></em></h1></div>
-    <p class="flex justify-center">Avalados por</p>
-    <div class="w-full flex justify-between items-center">
-    <img class ="h-10 w-30 m-2" src="./assets/anmat.png" alt="">
-    <img class ="h-10 w-15 m-2" src="./assets/salud-caba.jpg" alt="">
-    <img class ="h-10 w-30 m-2" src="./assets/ministerio-de-salud.png" alt=""></div>
-    <div class="w-full h-72 blue-back flex flex-col">
-      <div class="w-full h-12 text-white flex items-center justify-center text-xs py-2">AMPLIA<strong>&nbspVARIEDAD</strong>&nbspEN PRODUCTOS</div>
-      <div id="items">
+    <div class="w-full flex justify-center">
+    <div class="w-5/6 flex justify-center py-4 shadow-2xl my-6 rounded-3xl"><h1 class="w-11/12 text-center lg:text-3xl lg:py-12"><strong><em>Nuestra amplia experiencia nos permite brindar un servicio de excelencia que contempla tanto las necesidades del paciente como las de la prestadora de salud.</strong></em></h1></div></div>
+    <p class="flex justify-center text-blue-800 lg:text-4xl">Avalados por</p>
+    <div class="w-full flex justify-evenly items-center">
+    <img class ="h-10 w-30 m-2 lg:h-32" src="./assets/anmat.png" alt="">
+    <img class ="h-10 w-15 m-2 lg:h-52 lg:pl-16" src="./assets/salud-caba.jpg" alt="">
+    <img class ="h-10 w-30 m-2 lg:h-32" src="./assets/ministerio-de-salud.png" alt=""></div>
+    <div id="foto-slider" class="w-full h-72 blue-back flex flex-col">
+      <div class="w-full h-12 text-white flex items-center justify-center text-xs py-2 lg:text-4xl lg:h-24 lg:overflow-x-hidden">AMPLIA<strong class="mx-1 lg:mx-3">VARIEDAD</strong>EN PRODUCTOS</div>
+      <div id="items" class="py-2">
       <div class="item item0" style="background: url(./assets/img3.jpg); background-size: cover;" alt=""></div>
       <div class="item item1" style="background: url(./assets/img2.jpg); background-size: cover;" alt=""></div>
       <div class="item item2" style="background: url(./assets/img3.jpg); background-size: cover;" alt=""></div>
@@ -80,17 +91,76 @@
       <div class="item item7" style="background: url(./assets/img2.jpg); background-size: cover;" alt=""></div>
     </div>
     </div>
-    <a href="./productos.html"><div class="w-full h-12 bg-blue-200 text-blue-900 justify-center flex items-center text-xl tracking-widest"><p id= "ver-todos"><strong>VER &nbspTODOS</strong></p></div></a>
-    <p class="p-4 text-2xl text-center">¿No encontrás lo que buscás? <strong>¡Contactanos!</strong></p>
-    <div class="pb-5 w-full h-30 flex items-center justify-center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17243.666811418974!2d-58.45858658643997!3d-34.548696474217536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6a2837d765b%3A0x4453017f5147d46b!2sAv.%20Cabildo%204439%2C%20C1429ABC%20CABA!5e0!3m2!1ses!2sar!4v1613592338123!5m2!1ses!2sar" width="350" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
-    <div style="box-shadow: 0px 0px 2px black" class="w-full h-30  bg-gray-300   text-xs">
-      <p class="p-1 w-full"><strong>Microimplant S.A.</strong></p>
-      <p class="p-1 w-full">Av. Cabildo 4439/47 Piso 8 -C.P. 1429- C.A.B.A</p>
-      <p class="p-1 w-full"><em>microimplant@microimplant.com.ar</em></p>
-      <p class="p-1 w-full"><strong>TEL/FAX:</strong>&nbsp(011) 4952-3089/1884 (L a V de 9 a 18 hs)</p>
-      <p class="p-1 w-full"><strong>URGENCIAS:</strong> 15-6988-6741</p>
+    <a href="./productos.html"><div class="w-full h-12 bg-blue-200 text-blue-900 justify-center flex items-center text-xl tracking-widest lg:h-20 lg:text-3xl"><p id= "ver-todos"><strong>VER &nbspTODOS</strong></p></div></a>
+    <p class="p-4 text-2xl text-center lg:text-4xl lg:py-12">¿No encontrás lo que buscás? <strong>¡Contactanos!</strong></p>
+    <div class="lg:hidden pb-5 w-full h-30 flex items-center justify-center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17243.666811418974!2d-58.45858658643997!3d-34.548696474217536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6a2837d765b%3A0x4453017f5147d46b!2sAv.%20Cabildo%204439%2C%20C1429ABC%20CABA!5e0!3m2!1ses!2sar!4v1613592338123!5m2!1ses!2sar" width="350" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+    <div class="hidden lg:block lg:pb-10 lg:w-full lg:h-30 lg:flex lg:items-center lg:justify-center"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17243.666811418974!2d-58.45858658643997!3d-34.548696474217536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb6a2837d765b%3A0x4453017f5147d46b!2sAv.%20Cabildo%204439%2C%20C1429ABC%20CABA!5e0!3m2!1ses!2sar!4v1613592338123!5m2!1ses!2sar" width="1080" height="680" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+    <div style="box-shadow: 0px 0px 2px black" class="w-full h-30 bg-gray-300 text-xs lg:h-56 lg:text-xl">
+      <p class="p-1 w-full lg:p-2"><strong>Microimplant S.A.</strong></p>
+      <p class="p-1 w-full lg:p-2">Av. Cabildo 4439/47 Piso 8 -C.P. 1429- C.A.B.A</p>
+      <p class="p-1 w-full lg:p-2"><em>microimplant@microimplant.com.ar</em></p>
+      <p class="p-1 w-full lg:p-2"><strong>TEL/FAX:</strong>&nbsp(011) 4952-3089/1884 (L a V de 9 a 18 hs)</p>
+      <p class="p-1 w-full lg:p-2"><strong>URGENCIAS:</strong> 15-6988-6741</p>
     </div>
-    <script src="mis_datos.js"></script>
+    
 <script src="./main.js"></script>
+<script>
+  
+function cambiarPalabras() {
+  const palabrasFoto = [
+    "Calidad",
+    "Excelencia",
+    "Calidez",
+    "Servicio 24hs",
+    "Adaptabilidad",
+    "Flexibilidad",
+  ];
+  const contenedorPalabras = document.getElementById(
+    "contenedor-palabras-foto"
+  );
+  const display = (x) => (contenedorPalabras.innerText = x);
+  let i = 0;
+  setInterval(() => {
+    const current = palabrasFoto[i];
+    if (i <= palabrasFoto.length - 1) {
+      display(current);
+      i++;
+    } else {
+      i = 0;
+    }
+  }, 3000);
+}
+
+cambiarPalabras();
+
+const slider = document.querySelector('#items');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX);
+    slider.scrollLeft = scrollLeft - walk;
+  });
+</script>
 </body>
 </html>

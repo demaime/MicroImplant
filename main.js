@@ -9,30 +9,3 @@ function openMenu() {
 }
 
 abrirMenu.addEventListener("click", openMenu);
-
-function cambiarPalabras() {
-  const palabrasFoto = [
-    "Calidad",
-    "Excelencia",
-    "Calidez",
-    "Servicio 24hs",
-    "Adaptabilidad",
-    "Flexibilidad",
-  ];
-  const contenedorPalabras = document.getElementById(
-    "contenedor-palabras-foto"
-  );
-  const display = (x) => (contenedorPalabras.innerText = x);
-  let i = 0;
-  setInterval(() => {
-    const current = palabrasFoto[i];
-    if (i <= palabrasFoto.length - 1) {
-      display(current);
-      i++;
-    } else {
-      i = 0;
-    }
-  }, 3000);
-}
-
-cambiarPalabras();

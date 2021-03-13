@@ -85,9 +85,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 80px;
-  font-weight: 100;
-  color: rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 8px white;
   z-index: 1;
 }
@@ -107,6 +104,10 @@ a {
 }
 a:visited {
   text-decoration: none;
+}
+
+#logo:hover {
+  transform: scale(1.075);
 }
 
 @keyframes pulse {
@@ -152,5 +153,26 @@ a:visited {
   }
   100% {
     transform: scale(0.98);
+  }
+}
+
+@media (min-width: 1024px) {
+  #foto-inicial {
+    height: 40rem;
+  }
+  #foto-slider {
+    height: 35rem;
+  }
+  #items {
+    overflow: hidden;
+  }
+  .item {
+    width: 500px;
+  }
+  .item:nth-child(even) {
+    transform: scaleX(1.31) rotateY(40deg);
+  }
+  .item:nth-child(odd) {
+    transform: scaleX(1.31) rotateY(-40deg);
   }
 }
