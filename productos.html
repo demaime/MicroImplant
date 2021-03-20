@@ -113,55 +113,161 @@
         </div></a
       >
     </nav>
-    <div class="h-16 w-full"></div><!--Div que tuve que poner porque header tapa lo que haya debajo (porque es position fixed) pero si le pongo margin o padding al de abajo, mueve el header-->
-    <div class="flex items-center w-full h-8 bg-gray-800 text-blue-300 pl-2 mb-2">
-      Catálogo de Productos
-    </div>
 
-
-    <div class="h-42 w-full flex items-center justify-evenly">
+    <div class="h-16 lg:h-44 w-full"></div>
+    <div class="lg:hidden">
       <div
-        class="h-40 w-2/5 bg-gray-100 rounded-xl m-2 flex justify-center flex-col items-center"
-        style="box-shadow: 0px 1px 3px gray;"
-      ><a href="./productos/cabeza.html">
-        <img class="h-32 w-32 ml-2" src="./assets/cabeza.png" alt="" />
-        <div class="text-sm text-center">CABEZA</div>
-      </a></div>
-      
-      <div class="h-40 w-2/5 bg-gray-100 rounded-xl m-2 flex justify-center flex-col items-center"
-        style="box-shadow: 0px 1px 3px gray;"
+        class="flex items-center w-full h-8 bg-gray-800 text-blue-100 pl-2 mb-2 lg:hidden"
       >
-        <a href="./productos/columna.html">
-        <img class="h-32 w-32 ml-2" src="./assets/columna.png" alt="" />
-        <div class="text-sm text-center">COLUMNA</div></a>
+        <em>Catálogo de Productos</em>
       </div>
-    </div>
-    <div class="h-42 w-full flex items-center justify-evenly">
+
+      <div class="h-1/3 w-full flex items-center justify-evenly">
         <div
           class="h-40 w-2/5 bg-gray-100 rounded-xl m-2 flex justify-center flex-col items-center"
-          style="box-shadow: 0px 1px 3px gray;"
-        > <a href="./productos/rodilla.html">
-          <img class="h-32 w-32 ml-2" src="./assets/rodilla.png" alt="" />
-          <div class="text-sm text-center">RODILLA</div></a>
+          style="box-shadow: 0px 1px 3px gray"
+        >
+          <a href="./productos/cabeza.html">
+            <img class="h-32 w-32 ml-2" src="./assets/cabeza.png" alt="" />
+            <div class="text-sm text-center">CABEZA</div>
+          </a>
+        </div>
+
+        <div
+          class="h-40 w-2/5 bg-gray-100 rounded-xl m-2 flex justify-center flex-col items-center"
+          style="box-shadow: 0px 1px 3px gray"
+        >
+          <a href="./productos/columna.html">
+            <img class="h-32 w-32 ml-2" src="./assets/columna.png" alt="" />
+            <div class="text-sm text-center">COLUMNA</div></a
+          >
+        </div>
+      </div>
+      <div class="h-1/3 w-full flex items-center justify-evenly">
+        <div
+          class="h-40 w-2/5 bg-gray-100 rounded-xl m-2 flex justify-center flex-col items-center"
+          style="box-shadow: 0px 1px 3px gray"
+        >
+          <a href="./productos/rodilla.html">
+            <img class="h-32 w-32 ml-2" src="./assets/rodilla.png" alt="" />
+            <div class="text-sm text-center">RODILLA</div></a
+          >
         </div>
         <div
           class="h-40 w-2/5 bg-gray-100 rounded-xl m-2 flex justify-center flex-col items-center"
-          style="box-shadow: 0px 1px 3px gray;"
-        ><a href="./productos/cadera.html">
-          <img class="h-32 w-32 ml-2" src="./assets/cadera.png" alt="" />
-          <div class="text-sm text-center">CADERA</div></a>
+          style="box-shadow: 0px 1px 3px gray"
+        >
+          <a href="./productos/cadera.html">
+            <img class="h-32 w-32 ml-2" src="./assets/cadera.png" alt="" />
+            <div class="text-sm text-center">CADERA</div></a
+          >
         </div>
-      </div>   
-    <div class="h-42 w-full flex items-center justify-evenly">
+      </div>
+      <div class="h-1/3 w-full flex items-center justify-evenly">
         <div
           class="h-40 bg-gray-100 rounded-xl m-2 flex justify-center flex-col items-center"
-          style="box-shadow: 0px 1px 3px gray; width: 89%;"
-        > <a href="./productos/osteosintesis.html">
-          <img class="h-32 w-56 ml-2" src="./assets/osteo.png" alt="" />
-          <div class="text-sm text-center">OSTEOSINTESIS</div></a>
+          style="box-shadow: 0px 1px 3px gray; width: 89%"
+        >
+          <a href="./productos/osteosintesis.html">
+            <img class="h-32 w-56 ml-2" src="./assets/osteo.png" alt="" />
+            <div class="text-sm text-center">OSTEOSINTESIS</div></a
+          >
         </div>
       </div>
-    </p>
+    </div>
+    <div class="lg:block lg:w-full hidden" style="height: calc(100vh - 11rem)">
+      <div class="grid grid-cols-4 h-3/5 p-4 items-center">
+        <a
+          class="h-full w-full flex justify-center items-center"
+          href="./productos/cabeza.html"
+          ><div
+            class="productos h-5/6 w-5/6 flex items-center justify-evenly flex-col rounded-3xl shadow-2xl duration-500 justify-self-center"
+          >
+            <img
+              class="imagen-producto h-3/5 w-3/5 duration-700"
+              src="./assets/cabeza.png"
+              alt=""
+            />
+            <p class="text-5xl font-black tracking-wider">Cabeza</p>
+          </div></a
+        ><a
+          class="h-full w-full flex justify-center items-center"
+          href="./productos/columna.html"
+        >
+          <div
+            class="productos h-5/6 w-5/6 flex items-center justify-evenly flex-col rounded-3xl shadow-2xl duration-500 justify-self-center"
+          >
+            <img
+              class="imagen-producto h-3/5 w-3/5 duration-700"
+              src="./assets/columna.png"
+              alt=""
+            />
+            <p class="text-5xl font-black tracking-wider">Columna</p>
+          </div></a
+        >
+        <a
+          class="h-full w-full flex justify-center items-center"
+          href="./productos/rodilla.html"
+        >
+          <div
+            class="productos h-5/6 w-5/6 flex items-center justify-evenly flex-col rounded-3xl shadow-2xl duration-500 justify-self-center"
+          >
+            <img
+              class="imagen-producto h-3/5 w-3/5 duration-700"
+              src="./assets/rodilla.png"
+              alt=""
+            />
+            <p class="text-5xl font-black tracking-wider">Rodilla</p>
+          </div></a
+        >
+        <a
+          class="h-full w-full flex justify-center items-center"
+          href="./productos/cadera.html"
+        >
+          <div
+            class="productos h-5/6 w-5/6 flex items-center justify-evenly flex-col rounded-3xl shadow-2xl duration-500 justify-self-center"
+          >
+            <img
+              class="imagen-producto h-3/5 w-3/5 duration-700"
+              src="./assets/cadera.png"
+              alt=""
+            />
+            <p class="text-5xl font-black tracking-wider">Cadera</p>
+          </div></a
+        >
+      </div>
+      <a
+        class="flex w-full h-2/5 items-center"
+        href="./productos/osteosintesis.html"
+      >
+        <div class="h-full flex justify-center pb-8">
+          <div
+            class="productos flex items-center justify-evenly flex-col h-full rounded-3xl w-11/12 shadow-2xl duration-500"
+          >
+            <img
+              class="imagen-producto h-3/5 w-1/5 duration-700"
+              src="./assets/osteo.png"
+              alt=""
+            />
+            <p class="text-5xl font-black tracking-wider">Osteosíntesis</p>
+          </div>
+        </div></a
+      >
+    </div>
     <script src="./main.js"></script>
+    <style>
+      .productos:hover {
+        background-color: rgb(166, 217, 248);
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgb(1, 97, 145);
+      }
+      .productos:hover .imagen-producto {
+        transform: scale(1.1);
+      }
+      .productos:hover p {
+        text-shadow: 3px 3px 3px white, 4px 3px 3px rgb(1, 97, 145);
+      }
+    </style>
   </body>
 </html>
