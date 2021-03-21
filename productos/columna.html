@@ -111,8 +111,9 @@
         id="producto-columna"
         class="flex h-20 w-full justify-center text-center items-center"
       >
-        <p style="color: rgb(1, 97, 145)">SISTEMA DE FIJACIÓN DE COLUMNA</p>
-        &nbsp
+        <p id="producto-actual" style="color: rgb(1, 97, 145)">
+          SISTEMA DE FIJACIÓN DE COLUMNA
+        </p>
         <p>▼</p>
       </div>
       <div
@@ -153,19 +154,39 @@
         sustituto oseo en granulos
       </li>
     </ul>
-    <div class="mt-2 w-full h-64 flex items-center justify-center">
-      <img
-        class="max-w-full max-h-full"
-        src="../assets/fijacion-lumbar (1).jpeg"
-        alt=""
-      />
+    <div id="img-container" class="mt-2 h-64 overflow-scroll relative flex">
+      <div
+        class="w-full h-full justify-center items-center flex absolute opacity-0"
+      >
+        <img
+          class="max-w-full max-h-full"
+          src="../assets/fijacion-lumbar.jpeg"
+          alt=""
+        />
+      </div>
+      <div
+        class="w-full h-full justify-center items-center flex absolute opacity-0"
+      >
+        <img
+          class="max-w-full max-h-full"
+          src="../assets/fijacion-lumbar2.jpg"
+          alt=""
+        />
+      </div>
+      <div class="w-full h-full justify-center items-center flex absolute">
+        <img
+          class="max-w-full max-h-full"
+          src="../assets/fijacion-lumbar3.jpg"
+          alt=""
+        />
+      </div>
     </div>
     <div class="p-2 w-full flex">
-      <p class="w-4/6 p-2 text-sm">
+      <p id="description-container" class="w-4/6 p-2 text-sm">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet
         perspiciatis nulla, deserunt ut impedit et, mollitia ea alias quas
       </p>
-      <ul class="w-2/6 p-2 text-sm">
+      <ul id="medidas-container" class="w-2/6 p-2 text-sm">
         Medidas Disponibles:
         <li>a</li>
         <li>b</li>
@@ -177,6 +198,10 @@
       const productoColumna = document.querySelector("#producto-columna");
       const listaColumna = document.querySelector("#lista-columna");
       const itemsLista = document.querySelectorAll("#lista-columna li");
+      const actual = document.getElementById("producto-actual");
+      const imagen = document.getElementById("img-container");
+      const description = document.getElementById("description-container");
+      const medidas = document.getElementById("medidas-container");
 
       function menuColumna() {
         productoColumna.classList.toggle("opened");
@@ -188,11 +213,14 @@
       }
 
       function selectItem() {
-        console.log("funca");
+        productos.forEach;
+        actual.innerText = this.innerText;
+        console.log(productos[0].nombre);
       }
 
       productoColumna.addEventListener("click", menuColumna);
       itemsLista.forEach((item) => item.addEventListener("click", selectItem));
     </script>
+    <script src="../catalogo.js"></script>
   </body>
 </html>
