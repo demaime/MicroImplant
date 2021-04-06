@@ -1,5 +1,6 @@
 const productos = [
   {
+    id: "sistema_fijacion",
     categoria: "Columna",
     nombre: "Sistema de Fijación",
     descripcion:
@@ -11,6 +12,7 @@ const productos = [
     imagenes: ["culito.png", "tuvieja.jpeg", "lastfoto.png"],
   },
   {
+    id: "interespinoso_titanio",
     categoria: "Columna",
     nombre: "Sistema Interespinoso - Titanio",
     descripcion:
@@ -19,6 +21,7 @@ const productos = [
     imagenes: ["culito.png", "tuvieja.jpeg", "lastfoto.png"],
   },
   {
+    id: "fijacion_raquis",
     categoria: "Columna",
     nombre: "Sistema de Fijación",
     descripcion:

@@ -157,9 +157,6 @@ a:visited {
 }
 
 @media (min-width: 1024px) {
-  #foto-inicial {
-    height: 40rem;
-  }
   #foto-slider {
     height: 35rem;
   }

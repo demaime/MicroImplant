@@ -106,9 +106,7 @@
         class="flex h-20 w-full justify-center text-center items-center text-xl"
         style="font-variant: small-caps"
       >
-        <p id="producto-actual" style="color: rgb(1, 97, 145)">
-          sistema de fijación de columna
-        </p>
+        <p id="producto-actual" style="color: rgb(1, 97, 145)"></p>
         <p class="mx-2 text-xs pt-1">▼</p>
       </div>
     </div>
@@ -116,57 +114,7 @@
       id="lista-columna"
       class="max-h-0 overflow-hidden fixed text-center duration-500"
       style="color: rgb(1, 97, 145); font-variant: small-caps"
-    >
-      <li
-        class="bg-gray-50 border-b-2 border-blue-300 py-1"
-        style="box-shadow: 0px 0px 1px black"
-      >
-        sistema fijacion columna lumbar titanio
-      </li>
-      <li
-        class="bg-gray-50 border-b-2 border-blue-300 py-1"
-        style="box-shadow: 0px 0px 1px black"
-      >
-        sistema interespinoso en titanio
-      </li>
-      <li
-        class="bg-gray-50 border-b-2 border-blue-300 py-1"
-        style="box-shadow: 0px 0px 1px black"
-      >
-        sistema interespinoso en peek
-      </li>
-      <li
-        class="bg-gray-50 border-b-2 border-blue-300 py-1"
-        style="box-shadow: 0px 0px 1px black"
-      >
-        sistema de fijacion cage autosustentable cervical con pines de fijacion
-        y angulacion 6°
-      </li>
-      <li
-        class="bg-gray-50 border-b-2 border-blue-300 py-1"
-        style="box-shadow: 0px 0px 1px black"
-      >
-        sistema de instrimentacion para columna cervical
-      </li>
-      <li
-        class="bg-gray-50 border-b-2 border-blue-300 py-1"
-        style="box-shadow: 0px 0px 1px black"
-      >
-        sistema de fijacion posterior intersomatica en peek
-      </li>
-      <li
-        class="bg-gray-50 border-b-2 border-blue-300 py-1"
-        style="box-shadow: 0px 0px 1px black"
-      >
-        celda mesh reemplazo vertebral
-      </li>
-      <li
-        class="bg-white border-b-2 border-blue-300 py-1"
-        style="box-shadow: 0px 0px 1px black"
-      >
-        sustituto oseo en granulos
-      </li>
-    </ul>
+    ></ul>
     <div class="flex w-full h-full">
       <div
         id="left-arrow"
@@ -226,6 +174,7 @@
       </ul>
     </div>
     <script src="../main.js"></script>
+    <script src="../catalogo.js"></script>
     <script>
       const productoColumna = document.querySelector("#producto-columna");
       const listaColumna = document.querySelector("#lista-columna");
@@ -234,6 +183,16 @@
       const imagen = document.getElementById("img-container");
       const description = document.getElementById("description-container");
       const medidas = document.getElementById("medidas-container");
+
+      actual.innerText = productos[0].nombre;
+
+      productos.forEach(producto => {
+        const li = document.createElement('li')
+        li.classList = 'g-gray-50 border-b-2 border-blue-300 py-1'
+        li['data-product-id'] = producto.id
+        li.innerText = producto.nombre
+        listaColumna.appendChild(li)
+      })
 
       function menuColumna() {
         productoColumna.classList.toggle("opened");
@@ -247,16 +206,19 @@
           : 0;
       }
 
-      function selectItem() {
+      function selectItem(event) {
+        /*
         productos.forEach;
         actual.innerText = this.innerText;
         actual.style.fontVariant = "small-caps";
         console.log(productos[0].nombre);
+        */
+        const productId = event.target.dataset.productId
+        const elProductoQueMeImporta = productos.find((product) => product.id === productId)
       }
 
       productoColumna.addEventListener("click", menuColumna);
       itemsLista.forEach((item) => item.addEventListener("click", selectItem));
     </script>
-    <script src="../catalogo.js"></script>
   </body>
 </html>
