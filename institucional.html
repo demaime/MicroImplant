@@ -17,110 +17,58 @@
     <title>Institucional .::MicroIMPLANT::.</title>
   </head>
   <body style="font-family: 'Roboto', sans-serif">
-    <header
-      class="flex w-full h-16 items-center fixed z-10 lg:h-32"
-      style="
-        background: linear-gradient(
-          0.15turn,
-          rgb(1, 97, 145),
-          rgb(19, 172, 248)
-        );
-        border-bottom: solid rgb(102, 203, 243) 2px;
-      "
-    >
-      <a href="./home.html"
-        ><div
+    <body style="font-family: 'Roboto', sans-serif" class="lg:container mx-auto relative">
+      <header
+        class="absolute top-0 left-0 right-0 w-full z-10 sticky"
+        style="
+          background: linear-gradient(
+            0.15turn,
+            rgb(1, 97, 145),
+            rgb(19, 172, 248)
+          );
+          border-bottom: solid rgb(102, 203, 243) 2px; 
+        "
+      >
+      <div class="flex h-16 lg:h-32 items-center">
+        <a href="./home.html"><div
           class="h-16 w-16 flex items-center justify-center lg:h-32 lg:w-32"
-          style="
-            border-right: double rgb(102, 203, 243) 3px;
-            border-radius: 10px;
-          "
+          style="border-right: double rgb(102, 203, 243) 3px; border-radius: 10px;"
         >
-          <img
-            id="logo"
-            class="h-11 w-11 lg:h-4/5 lg:w-4/5 duration-500"
-            src="./assets/logo.png"
-            alt=""
-          /></div
-      ></a>
-      <div
-        class="h-12 text-white text-3xl mx-3 lg:h-32 lg:text-7xl lg:flex lg:flex-col lg:justify-center"
-      >
-        <p>MICRO<strong>IMPLANT</strong></p>
-        <span class="text-xs lg:text-2xl lg:ml-1"><p>Insumos Médicos</p></span>
-      </div>
-      <div
-        class="hamburguer ml-2 h-11 w-10 rounded-sm overflow-hidden flex flex-col ml-auto pr-12 lg:hidden"
-      >
-        <div class="abrirMenu h-11 w-10">
-          <div class="but1"></div>
-          <div class="but2"></div>
-          <div class="but3"></div>
+          <img id="logo" class="h-11 w-11 lg:h-4/5 lg:w-4/5 duration-500" src="./assets/logo.png" alt="" />
+        </div></a>
+        <div class="h-12 text-white text-3xl mx-3 lg:h-32 lg:text-7xl lg:flex lg:flex-col lg:justify-center"><p>
+          MICRO<strong>IMPLANT</strong></p><span class="text-xs lg:text-2xl lg:ml-1"
+            ><p>Insumos Médicos</p></span
+          >
+        </div>
+        <div class="hamburguer ml-2 h-11 w-10 rounded-sm overflow-hidden flex flex-col ml-auto pr-12 lg:hidden">
+          <div class="abrirMenu h-11 w-10">
+              <div class="but1"></div>
+              <div class="but2"></div>
+              <div class="but3"></div>
+          </div>  
         </div>
       </div>
-    </header>
-
-    <ul
-      id="menu"
-      class="w-full text-white flex flex-col opacity-90 fixed mt-16 max-h-0 overflow-hidden duration-500 z-10"
-    >
-      <a href="./home.html"
-        ><li
-          class="bg-gray-500 h-12 items-center flex pl-2 border-b border-gray-400"
-        >
-          HOME
-        </li></a
-      >
-      <a href="./institucional.html"
-        ><li
-          class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
-        >
-          INSTITUCIONAL
-        </li></a
-      >
-      <a href="./productos.html"
-        ><li
-          class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
-        >
-          PRODUCTOS
-        </li></a
-      >
-      <a href="./contacto.html"
-        ><li class="bg-gray-800 h-12 items-center flex pl-2">CONTACTO</li></a
-      >
-    </ul>
-    <nav
-      class="sm:hidden lg:z-10 lg:fixed lg:h-12 lg:w-full lg:bg-gray-700 lg:mt-32 lg:items-center lg:flex lg:border-b lg:border-blue-300 lg:justify-evenly"
-    >
-      <a href="./home.html"
-        ><div class="hidden lg:block lg:text-white lg:tracking-wider">
-          HOME
-        </div></a
-      >
-      <a href="./institucional.html"
-        ><div class="hidden lg:block lg:text-blue-300 lg:tracking-wider">
-          <strong>INSTITUCIONAL</strong>
-        </div></a
-      >
-      <a href="./productos.html"
-        ><div class="hidden lg:block lg:text-white lg:tracking-wider">
-          PRODUCTOS
-        </div></a
-      >
-      <a href="./contacto.html"
-        ><div class="hidden lg:block lg:text-white lg:tracking-wider">
-          CONTACTO
-        </div></a
-      >
-    </nav>
-    <div class="h-16 w-full"></div>
-    <!--Div que tuve que poner porque header tapa lo que haya debajo (porque es position fixed) pero si le pongo margin o padding al de abajo, mueve el header-->
-    <div
-      class="flex items-center w-full h-8 bg-gray-800 text-blue-300 pl-2 mb-2"
-    >
-      Institucional
-    </div>
-
+        <ul id="menu" class="w-full text-white flex flex-col opacity-90 max-h-0 overflow-hidden duration-500 z-10">
+            <a href="./home.html"><li class="bg-gray-500 h-12 items-center flex pl-2 border-b border-gray-400">HOME</li></a>
+            <a href="./institucional.html"><li
+              class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
+            >
+              INSTITUCIONAL
+            </li></a>
+            <a href="./productos.html"><li class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400">PRODUCTOS</li></a>
+            <a href="./contacto.html"><li class="bg-gray-800 h-12 items-center flex pl-2">CONTACTO</li></a>
+        </ul>
+        <nav class="sm:hidden lg:z-10 lg:h-12 lg:w-full lg:bg-gray-700 lg:items-center lg:flex lg:border-b lg:border-blue-300 lg:justify-evenly">
+          <a href="./home.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">HOME</div></a>
+            <a href="./institucional.html"><div class="hidden lg:block lg:text-blue-300 lg:tracking-wider"
+            ><strong>
+              INSTITUCIONAL</strong>
+            </div></a>
+            <a href="./productos.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">PRODUCTOS</div></a>
+            <a href="./contacto.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">CONTACTO</div></a>
+        </nav>
+      </header>
     <div class="text-blue-400 p-3 text-lg" style="font-variant: small-caps">
       <strong>¿Quiénes somos?</strong>
     </div>
