@@ -87,7 +87,7 @@
       </header>
     <div
       class="flex items-center justify-between w-full h-8 bg-gray-800 text-blue-300 px-2"
-    >
+    > 
       <p><em>Catálogo de Productos</em></p>
       <a href="../productos.html">
         <p class="text-xs text-white">Volver al catálogo</p></a
@@ -108,7 +108,7 @@
         class="flex h-20 w-full justify-center text-center items-center text-xl"
         style="font-variant: small-caps"
       >
-        <p id="producto-actual" style="color: rgb(1, 97, 145)"></p>
+        <p id="producto-actual" class="font-bold tracking-wide" style="color: rgb(1, 97, 145)"></p>
         <p class="mx-2 text-xs pt-1">▼</p>
       </div>
     </div>
@@ -180,17 +180,15 @@
       /*imagen.innerHTML? =  */
       description.innerText = productos[0].descripcion;
       /*medidas.innerText = productos[0].medidas.forEach(medida => ? );*/
-      medidas.innerHTML = `<ul>${productos[0].medidas[0].titulo}<li>${productos[0].medidas[0].tamaño[0]}</li><li>${productos[0].medidas[0].tamaño[1]}</li></ul>
-      <ul>${productos[0].medidas[1].titulo}<li>${productos[0].medidas[1].tamaño[0]}</li><li>${productos[0].medidas[1].tamaño[1]}</li></li><li>${productos[0].medidas[1].tamaño[2]}</li></li><li>${productos[0].medidas[1].tamaño[3]}</li></ul>`;
+      medidas.innerHTML = `<ul>${productos[0].medidas[0].titulo}<li>${productos[0].medidas[0].tamano[0]}</li><li>${productos[0].medidas[0].tamano[1]}</li></ul>
+      <ul>${productos[0].medidas[1].titulo}<li>${productos[0].medidas[1].tamano[0]}</li><li>${productos[0].medidas[1].tamano[1]}</li></li><li>${productos[0].medidas[1].tamano[2]}</li></li><li>${productos[0].medidas[1].tamano[3]}</li></ul>`;
 
       productos.forEach((producto) => {
-        if (producto.categoria === "Columna") {
           const li = document.createElement("li");
-          li.classList = "g-gray-50 border-b-2 border-blue-300 py-1";
+          li.classList = "g-gray-50 border-b-2 border-blue-300 py-1 font-bold tracking-wide";
           // li["data-product-id"] = producto.id;
           li.innerText = producto.nombre;
           listaColumna.appendChild(li);
-        }
       });
 
       function menuColumna() {
