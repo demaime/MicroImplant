@@ -110,6 +110,10 @@ a:visited {
   transform: scale(1.075);
 }
 
+#producto-columna:hover {
+  cursor: pointer;
+}
+
 @keyframes pulse {
   0% {
     opacity: 0;

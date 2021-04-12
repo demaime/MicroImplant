@@ -30,7 +30,7 @@
         rel="stylesheet"
       />
       <title>.::MicroIMPLANT::.</title>
-      <link rel="stylesheet" href="./styles.css">
+      <link rel="stylesheet" href="../styles.css">
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
     <body style="font-family: 'Roboto', sans-serif" class="lg:container mx-auto relative">
@@ -76,12 +76,12 @@
             <a href="../contacto.html"><li class="bg-gray-800 h-12 items-center flex pl-2">CONTACTO</li></a>
         </ul>
         <nav class="sm:hidden lg:z-10 lg:h-12 lg:w-full lg:bg-gray-700 lg:items-center lg:flex lg:border-b lg:border-blue-300 lg:justify-evenly">
-          <a href="../home.html"><div class="hidden lg:block lg:text-blue-300 lg:tracking-wider"><strong>HOME</strong></div></a>
+          <a href="../home.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">HOME</div></a>
             <a href="../institucional.html"><div class="hidden lg:block lg:text-white lg:tracking-wider"
             >
               INSTITUCIONAL
             </div></a>
-            <a href="../productos.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">PRODUCTOS</div></a>
+            <a href="../productos.html"><div class="hidden lg:block lg:text-blue-300  lg:tracking-wider"><strong>PRODUCTOS</strong></div></a>
             <a href="../contacto.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">CONTACTO</div></a>
         </nav>
       </header>
@@ -109,13 +109,13 @@
         style="font-variant: small-caps"
       >
         <p id="producto-actual" class="font-bold tracking-wide" style="color: rgb(1, 97, 145)"></p>
-        <p class="mx-2 text-xs pt-1">▼</p>
+        <p class="mx-2 text-xl pt-1">▼</p>
       </div>
     </div>
     <ul
       id="lista-columna"
       class="max-h-0 overflow-hidden absolute bg-gray-100 w-full text-center duration-500"
-      style="color: rgb(1, 97, 145); font-variant: small-caps"
+      style="color: rgb(1, 97, 145); font-variant: small-caps; box-shadow: 0px 1px 6px rgb(1, 97, 145)"
     ></ul>
     <div class="flex w-full h-full">
       <div
@@ -170,7 +170,7 @@
     <script>
       const productoColumna = document.querySelector("#producto-columna");
       const listaColumna = document.querySelector("#lista-columna");
-      const itemsLista = document.querySelectorAll("#lista-columna li");
+      
       const productoActual = document.getElementById("producto-actual");
       const imagen = document.getElementById("img-container");
       const description = document.getElementById("description-container");
@@ -184,13 +184,19 @@
       <ul>${productos[0].medidas[1].titulo}<li>${productos[0].medidas[1].tamano[0]}</li><li>${productos[0].medidas[1].tamano[1]}</li></li><li>${productos[0].medidas[1].tamano[2]}</li></li><li>${productos[0].medidas[1].tamano[3]}</li></ul>`;
 
       productos.forEach((producto) => {
+        if (producto.categoria === "Columna") {
           const li = document.createElement("li");
-          li.classList = "g-gray-50 border-b-2 border-blue-300 py-1 font-bold tracking-wide";
-          // li["data-product-id"] = producto.id;
+          li.classList = "bg-blue-50 border-t border-blue-300 py-1 font-bold tracking-wide duration-150";
+          li.onmouseover = function () {this.style.cursor = "pointer"; this.style.transform = "scale(1.1)"}
+          li.onmouseleave = function () {this.style.transform = "scale(1)"}
+          li["data"] = producto.id;
           li.innerText = producto.nombre;
           listaColumna.appendChild(li);
+        }
       });
-
+      const itemsLista = Array.from(document.querySelectorAll("#lista-columna li"));
+      console.log(itemsLista)
+      
       function menuColumna() {
         productoColumna.classList.toggle("opened");
         listaColumna.style.maxHeight = productoColumna.classList.contains(
@@ -204,16 +210,12 @@
       }
 
       function selectItem(event) {
-        /*
-        productos.forEach;
-        actual.innerText = this.innerText;
-        actual.style.fontVariant = "small-caps";
-        console.log(productos[0].nombre);
-        */
-        const productId = event.target.dataset.productId;
-        const elProductoQueMeImporta = productos.find(
-          (product) => product.id === productId
-        );
+        const productId = event.target.data;
+        const productClicked = productos.find(
+          (product) => product.id === productId)
+        productoActual.innerText = productClicked.nombre;
+        description.innerText = productClicked.descripcion;
+        menuColumna()
       }
 
       productoColumna.addEventListener("click", menuColumna);
