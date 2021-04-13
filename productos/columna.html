@@ -174,20 +174,9 @@
       /*imagen.innerHTML? =  */
       description.innerText = productos[0].descripcion;
       /*medidas.innerText = productos[0].medidas.forEach(medida => ? );*/
-      medidas.innerHTML = `
-        <p>${productos[0].medidas[0].titulo}</p>
-        <ul>
-          <li>${productos[0].medidas[0].tamano[0]}</li>
-          <li>${productos[0].medidas[0].tamano[1]}</li>
-        </ul>
-        <p>${productos[0].medidas[1].titulo}</p>
-        <ul>
-          <li>${productos[0].medidas[1].tamano[0]}</li>
-          <li>${productos[0].medidas[1].tamano[1]}</li>
-          <li>${productos[0].medidas[1].tamano[2]}</li>
-          <li>${productos[0].medidas[1].tamano[3]}</li>
-        </ul>
-      `;
+
+      
+      actualizarMedidas(productos[0].medidas)
 
       productos.forEach((producto) => {
         if (producto.categoria === "Columna") {
@@ -200,6 +189,18 @@
           listaColumna.appendChild(li);
         }
       });
+
+      function actualizarMedidas (arrMedidas) {
+        medidas.innerHTML = arrMedidas.map(medida => {
+          const items = medida.tamano.map(tamano => `<li>${tamano}</li>`).join('')
+          return `
+            <div class="mb-4">
+              <p>${medida.titulo}</p>
+              <ul class="ml-2">${items}</ul>
+            </div>
+          `
+        }).join('')
+      }
       
       function menuColumna() {
         productoColumna.classList.toggle("opened");
@@ -219,6 +220,8 @@
           (product) => product.id === productId)
         productoActual.innerText = productClicked.nombre;
         description.innerText = productClicked.descripcion;
+
+        actualizarMedidas(productClicked.medidas)
 
         let imgHtml = ''
         const classesByIndex = ['uno', 'dos', 'tres']

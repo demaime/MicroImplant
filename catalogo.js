@@ -21,7 +21,9 @@ const productos = [
     nombre: "Sistema Interespinoso - Titanio",
     descripcion:
       "Se utiliza en el tratamiento de la enfermedad degenerativa discal. Presenta un mecanismo de implantación por la vía lateral del espacio interespinoso preservando el ligamento supraespinoso.",
-    medidas: { titulo: "Medidas", tamano: ["8 mm", "10 mm", "12 mm", "14 mm"] },
+    medidas: [
+      { titulo: "Medidas", tamano: ["8 mm", "10 mm", "12 mm", "14 mm"] },
+    ],
     imagenes: [
       "interespinoso_titanio1.png",
       "interespinoso_titanio2.png",
@@ -34,7 +36,9 @@ const productos = [
     nombre: "Sistema Interespinoso - Peek",
     descripcion:
       "Este dispositivo funciona como soporte del espacio afectado y protege principalmente los elementos posteriores al mantener la altura del agujero foraminal, abrir hacia arriba la superficie del canal vertebral, reducir la tensión sobre las carillas articulares y aliviar la presión sobre el anillo posterior.",
-    medidas: { titulo: "Medidas", tamano: ["8 mm", "10 mm", "12 mm", "14 mm"] },
+    medidas: [
+      { titulo: "Medidas", tamano: ["8 mm", "10 mm", "12 mm", "14 mm"] },
+    ],
     imagenes: [
       "interespinoso_peek1.jpg",
       "interespinoso_peek2.jpg",
@@ -47,10 +51,12 @@ const productos = [
     nombre: "Sistema de fijación cervical Cage",
     descripcion:
       "Sistema autosustentable cervical en Peek con una angulación de 6º. Combina la funcionalidad de un dispositivo intersomático y las ventajas de una placa cervical",
-    medidas: {
-      titulo: "Medidas",
-      tamano: ["4.5 mm", "5 mm", "6 mm", "7 mm", "8 mm"],
-    },
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["4.5 mm", "5 mm", "6 mm", "7 mm", "8 mm"],
+      },
+    ],
     imagenes: [
       "fijacion_cage1.jpg",
       "fijacion_cage2.jpg",
@@ -63,10 +69,12 @@ const productos = [
     nombre: "Sistema de instrumentación p/ columna",
     descripcion:
       "Se utiliza para brindar una estabilidad considerable a la columna vertebral después de la cirugía y puede incluir placas cervicales anteriores, placas cervical posteriores, cableado cervical posterior, cajetines de fusión intervertebral cervical anterior y elementos ortóticos cervicales posoperatorios",
-    medidas: {
-      titulo: "Medidas",
-      tamano: ["de 18 mm a 72 mm"],
-    },
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["de 18 mm a 72 mm"],
+      },
+    ],
     imagenes: [
       "instrumentacion_cervical1.png",
       "instrumentacion_cervical2.png",
@@ -101,10 +109,12 @@ const productos = [
     nombre: "Celda Mesh - Reemplazo Vertical",
     descripcion:
       "Realizadas en titanio quirúrgico en una sola pieza, destinadas a reemplazo de cuerpo vertebral cervical, dorsal ó lumbar.",
-    medidas: {
-      titulo: "Medidas",
-      tamano: ["Varias"],
-    },
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
     imagenes: ["celda1.png", "celda2.jpg", "celda3.jpg"],
   },
   {
@@ -112,10 +122,12 @@ const productos = [
     categoria: "Columna",
     nombre: "Sustituto Óseo en granulos",
     descripcion: "NO INFO",
-    medidas: {
-      titulo: "Medidas",
-      tamano: ["NO INFO"],
-    },
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["NO INFO"],
+      },
+    ],
     imagenes: [
       "fijacion_peek1.jpg",
       "fijacion_peek2.jpg",
@@ -127,10 +139,12 @@ const productos = [
     categoria: "Rodilla",
     nombre: "Reemplazo total",
     descripcion: "NO INFO",
-    medidas: {
-      titulo: "Medidas",
-      tamano: ["NO INFO"],
-    },
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["NO INFO"],
+      },
+    ],
     imagenes: [
       "fijacion_peek1.jpg",
       "fijacion_peek2.jpg",
@@ -142,10 +156,12 @@ const productos = [
     categoria: "Rodilla",
     nombre: "Reemplazo de ligamentos",
     descripcion: "NO INFO",
-    medidas: {
-      titulo: "Medidas",
-      tamano: ["NO INFO"],
-    },
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["NO INFO"],
+      },
+    ],
     imagenes: [
       "fijacion_peek1.jpg",
       "fijacion_peek2.jpg",
