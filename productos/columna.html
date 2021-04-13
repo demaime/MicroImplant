@@ -167,31 +167,12 @@
       const imgcontainer = document.getElementById("img-container")
       const slider = Array.from(document.querySelectorAll("#slider .but-img"));
       const description = document.getElementById("description-container");
-      const medidas = document.getElementById("medidas-container");
-      // console.log(imagen, slider)
+      const medidasContainer = document.getElementById("medidas-container");
 
-      productoActual.innerText = productos[0].nombre;
-      /*imagen.innerHTML? =  */
-      description.innerText = productos[0].descripcion;
-      /*medidas.innerText = productos[0].medidas.forEach(medida => ? );*/
+      init()
 
-      
-      actualizarMedidas(productos[0].medidas)
-
-      productos.forEach((producto) => {
-        if (producto.categoria === "Columna") {
-          const li = document.createElement("li");
-          li.classList = "bg-blue-50 border-t border-blue-300 py-1 font-bold tracking-wide duration-150";
-          li.onmouseover = function () {this.style.cursor = "pointer"; this.style.transform = "scale(1.1)"}
-          li.onmouseleave = function () {this.style.transform = "scale(1)"}
-          li["data"] = producto.id;
-          li.innerText = producto.nombre;
-          listaColumna.appendChild(li);
-        }
-      });
-
-      function actualizarMedidas (arrMedidas) {
-        medidas.innerHTML = arrMedidas.map(medida => {
+      function actualizarMedidas (elemento, arrMedidas) {
+        elemento.innerHTML = arrMedidas.map(medida => {
           const items = medida.tamano.map(tamano => `<li>${tamano}</li>`).join('')
           return `
             <div class="mb-4">
@@ -221,7 +202,7 @@
         productoActual.innerText = productClicked.nombre;
         description.innerText = productClicked.descripcion;
 
-        actualizarMedidas(productClicked.medidas)
+        actualizarMedidas(medidasContainer, productClicked.medidas)
 
         let imgHtml = ''
         const classesByIndex = ['uno', 'dos', 'tres']
@@ -266,10 +247,29 @@
         })
       }
 
-      const itemsLista = Array.from(document.querySelectorAll("#lista-columna li"));
-      productoColumna.addEventListener("click", menuColumna);
-      itemsLista.forEach((item) => item.addEventListener("click", selectItem));
-      slider.forEach(item => item.addEventListener("click", showImage));
+      function init () {
+        const productoInicial = productos[0]
+        productoActual.innerText = productoInicial.nombre;
+        description.innerText = productoInicial.descripcion;
+        actualizarMedidas(medidasContainer, productoInicial.medidas)
+
+        productos.forEach((producto) => {
+          if (producto.categoria === "Columna") {
+            const li = document.createElement("li");
+            li.classList = "bg-blue-50 border-t border-blue-300 py-1 font-bold tracking-wide duration-150";
+            li.onmouseover = function () {this.style.cursor = "pointer"; this.style.transform = "scale(1.1)"}
+            li.onmouseleave = function () {this.style.transform = "scale(1)"}
+            li["data"] = producto.id;
+            li.innerText = producto.nombre;
+            listaColumna.appendChild(li);
+          }
+        });
+
+        const itemsLista = Array.from(document.querySelectorAll("#lista-columna li"));
+        productoColumna.addEventListener("click", menuColumna);
+        itemsLista.forEach((item) => item.addEventListener("click", selectItem));
+        slider.forEach(item => item.addEventListener("click", showImage));
+      }
     </script>
   </body>
 </html>
