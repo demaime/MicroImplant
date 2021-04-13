@@ -3,6 +3,10 @@
   --primary-color-dark: rgb(1, 97, 145);
 }
 
+.bg-primary-dark {
+  background-color: var(--primary-color-dark);
+}
+
 .abrirMenu > div {
   transition: all 0.25s;
 }
@@ -122,15 +126,7 @@ a:visited {
 .uno,
 .dos,
 .tres {
-  opacity: 0;
   transition: all 500ms;
-}
-#img-container :first-child {
-  opacity: 1;
-}
-
-.imagenmostrada {
-  opacity: 1;
 }
 
 @keyframes pulse {

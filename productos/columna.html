@@ -123,7 +123,7 @@
         class="mt-2 h-96 overflow-hidden relative flex w-full"
       >
         <div 
-          class="uno w-full h-96 justify-center items-center flex absolute p-2"
+          class="uno opacity-1 w-full h-96 justify-center items-center flex absolute p-2"
         >
           <img
             class="max-w-full max-h-full"
@@ -132,7 +132,7 @@
           />
         </div>
         <div 
-        class="dos w-full h-96 justify-center items-center flex absolute p-2 ">
+        class="dos opacity-0 w-full h-96 justify-center items-center flex absolute p-2 ">
           <img
             class="max-w-full max-h-full"
             src="../assets/fijacion_titanio2.jpg"
@@ -140,7 +140,7 @@
           />
         </div>
         <div
-        class="tres w-full h-96 justify-center items-center flex absolute p-2">
+        class="tres opacity-0 w-full h-96 justify-center items-center flex absolute p-2">
           <img
             class="max-w-full max-h-full"
             src="../assets/fijacion_titanio3.jpg"
@@ -150,9 +150,9 @@
       </div>
     </div>
     <div id="slider" class="w-full h-8 my-2 flex items-center justify-center">
-      <div data-image="uno" class="but-img rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></div>
-      <div data-image="dos" class="but-img rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></div>
-      <div data-image="tres" class="but-img rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></div>
+      <button data-image="uno" class="but-img bg-primary-dark focus:outline-none rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></button>
+      <button data-image="dos" class="but-img focus:outline-none rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></button>
+      <button data-image="tres" class="but-img focus:outline-none rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></button>
     </div>
     <div class="p-2 w-full flex">
       <p id="description-container" class="w-4/6 p-2 text-xl"></p>
@@ -165,7 +165,7 @@
       const listaColumna = document.querySelector("#lista-columna");
       const productoActual = document.getElementById("producto-actual");
       const imgcontainer = document.getElementById("img-container")
-      const slider = Array.from(document.querySelectorAll("#slider div"));
+      const slider = Array.from(document.querySelectorAll("#slider .but-img"));
       const description = document.getElementById("description-container");
       const medidas = document.getElementById("medidas-container");
       // console.log(imagen, slider)
@@ -225,7 +225,7 @@
         productClicked.imagenes.forEach((imagen, i) => {
           imgHtml += `
             <div 
-              class="${classesByIndex[i]} w-full h-96 justify-center items-center flex absolute p-2"
+              class="${classesByIndex[i]} opacity-${i === 0 ? '1' : '0'} w-full h-96 justify-center items-center flex absolute p-2"
             >
               <img
                 class="max-w-full max-h-full"
@@ -241,16 +241,26 @@
         
       }
       
-      function showImage () {
+      function showImage (e) {
         const imagen = Array.from(document.querySelectorAll("#img-container div"));
-        imagen.forEach((foto) => {
-              if (foto.classList.contains(this.dataset.image)) {
-               foto.style.opacity = 1;
-            } else {
-               foto.style.opacity = 0;
-            }
+        slider.forEach((butImg) => {
+          if (this.dataset.image === butImg.dataset.image) {
+            butImg.classList.add('bg-primary-dark')
+            butImg.classList.remove('bg-gray-400')
+          } else {
+            butImg.classList.remove('bg-primary-dark')
+            butImg.classList.add('bg-gray-400')
           }
-        )
+        })
+        imagen.forEach((foto) => {
+          if (foto.classList.contains(this.dataset.image)) {
+            foto.classList.add('opacity-1')
+            foto.classList.remove('opacity-0')
+          } else {
+            foto.classList.add('opacity-0')
+            foto.classList.remove('opacity-1')
+          }
+        })
       }
 
       const itemsLista = Array.from(document.querySelectorAll("#lista-columna li"));
