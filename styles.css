@@ -113,6 +113,25 @@ a:visited {
 #producto-columna:hover {
   cursor: pointer;
 }
+.but-img:hover {
+  transform: scale(1.1);
+  background-color: black;
+  cursor: pointer;
+}
+
+.uno,
+.dos,
+.tres {
+  opacity: 0;
+  transition: all 500ms;
+}
+#img-container :first-child {
+  opacity: 1;
+}
+
+.imagenmostrada {
+  opacity: 1;
+}
 
 @keyframes pulse {
   0% {

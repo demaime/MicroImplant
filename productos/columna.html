@@ -117,20 +117,13 @@
       class="max-h-0 overflow-hidden absolute bg-gray-100 w-full text-center duration-500"
       style="color: rgb(1, 97, 145); font-variant: small-caps; box-shadow: 0px 1px 6px rgb(1, 97, 145)"
     ></ul>
-    <div class="flex w-full h-full">
-      <div
-        id="left-arrow"
-        class="w-1/4 flex text-6xl items-center justify-start pl-2"
-        style="text-shadow: 1px 1px 6px rgb(1, 97, 145)"
-      >
-        «
-      </div>
+    <div class="flex w-full h-96">
       <div
         id="img-container"
-        class="mt-2 h-64 overflow-hidden relative flex w-full"
+        class="mt-2 h-96 overflow-hidden relative flex w-full"
       >
-        <div
-          class="w-full h-full justify-center items-center flex absolute opacity-0"
+        <div 
+          class="uno w-full h-96 justify-center items-center flex absolute p-2"
         >
           <img
             class="max-w-full max-h-full"
@@ -138,14 +131,16 @@
             alt=""
           />
         </div>
-        <div class="w-full h-full justify-center items-center flex absolute">
+        <div 
+        class="dos w-full h-96 justify-center items-center flex absolute p-2 ">
           <img
             class="max-w-full max-h-full"
             src="../assets/fijacion_titanio2.jpg"
             alt=""
           />
         </div>
-        <div class="w-full h-full justify-center items-center flex absolute">
+        <div
+        class="tres w-full h-96 justify-center items-center flex absolute p-2">
           <img
             class="max-w-full max-h-full"
             src="../assets/fijacion_titanio3.jpg"
@@ -153,16 +148,14 @@
           />
         </div>
       </div>
-      <div
-        id="right-arrow"
-        class="w-1/4 flex text-6xl items-center justify-end pr-2"
-        style="text-shadow: 1px 1px 2px rgb(1, 97, 145)"
-      >
-        »
-      </div>
+    </div>
+    <div id="slider" class="w-full h-8 my-2 flex items-center justify-center">
+      <div data-image="uno" class="but-img rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></div>
+      <div data-image="dos" class="but-img rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></div>
+      <div data-image="tres" class="but-img rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></div>
     </div>
     <div class="p-2 w-full flex">
-      <p id="description-container" class="w-4/6 p-2 text-sm"></p>
+      <p id="description-container" class="w-4/6 p-2 text-xl"></p>
       <ul id="medidas-container" class="w-2/6 p-2 text-sm"></ul>
     </div>
     <script src="../main.js"></script>
@@ -170,11 +163,12 @@
     <script>
       const productoColumna = document.querySelector("#producto-columna");
       const listaColumna = document.querySelector("#lista-columna");
-      
       const productoActual = document.getElementById("producto-actual");
-      const imagen = document.getElementById("img-container");
+      const imagen = Array.from(document.querySelectorAll("#img-container div"));
+      const slider = Array.from(document.querySelectorAll("#slider div"));
       const description = document.getElementById("description-container");
       const medidas = document.getElementById("medidas-container");
+      // console.log(imagen, slider)
 
       productoActual.innerText = productos[0].nombre;
       /*imagen.innerHTML? =  */
@@ -195,7 +189,17 @@
         }
       });
       const itemsLista = Array.from(document.querySelectorAll("#lista-columna li"));
-      console.log(itemsLista)
+      
+      function showImage () {
+        // console.log(this.dataset)
+        imagen.forEach((foto) => {
+        if (foto.classList.contains(this.dataset.image)) {
+          foto.style.opacity = 1;
+      } else {
+        foto.style.opacity = 0;
+      }
+    })}
+
       
       function menuColumna() {
         productoColumna.classList.toggle("opened");
@@ -220,6 +224,7 @@
 
       productoColumna.addEventListener("click", menuColumna);
       itemsLista.forEach((item) => item.addEventListener("click", selectItem));
+      slider.forEach(item => item.addEventListener("click", showImage));
     </script>
   </body>
 </html>
