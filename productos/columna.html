@@ -165,7 +165,6 @@
       const listaColumna = document.querySelector("#lista-columna");
       const productoActual = document.getElementById("producto-actual");
       const imgcontainer = document.getElementById("img-container")
-      const imagen = Array.from(document.querySelectorAll("#img-container div"));
       const slider = Array.from(document.querySelectorAll("#slider div"));
       const description = document.getElementById("description-container");
       const medidas = document.getElementById("medidas-container");
@@ -242,6 +241,7 @@
       }
       
       function showImage () {
+        const imagen = Array.from(document.querySelectorAll("#img-container div"));
         imagen.forEach((foto) => {
               if (foto.classList.contains(this.dataset.image)) {
                foto.style.opacity = 1;
