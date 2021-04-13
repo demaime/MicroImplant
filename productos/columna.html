@@ -164,6 +164,7 @@
       const productoColumna = document.querySelector("#producto-columna");
       const listaColumna = document.querySelector("#lista-columna");
       const productoActual = document.getElementById("producto-actual");
+      const imgcontainer = document.getElementById("img-container")
       const imagen = Array.from(document.querySelectorAll("#img-container div"));
       const slider = Array.from(document.querySelectorAll("#slider div"));
       const description = document.getElementById("description-container");
@@ -189,16 +190,6 @@
         }
       });
       const itemsLista = Array.from(document.querySelectorAll("#lista-columna li"));
-      
-      function showImage () {
-        // console.log(this.dataset)
-        imagen.forEach((foto) => {
-        if (foto.classList.contains(this.dataset.image)) {
-          foto.style.opacity = 1;
-      } else {
-        foto.style.opacity = 0;
-      }
-    })}
 
       
       function menuColumna() {
@@ -219,7 +210,46 @@
           (product) => product.id === productId)
         productoActual.innerText = productClicked.nombre;
         description.innerText = productClicked.descripcion;
+        imgcontainer.innerHTML = `
+        <div 
+          class="uno w-full h-96 justify-center items-center flex absolute p-2"
+        >
+          <img
+            class="max-w-full max-h-full"
+            src="../assets/${productClicked.imagenes[0]}"
+            alt=""
+          />
+        </div>
+        <div 
+        class="dos w-full h-96 justify-center items-center flex absolute p-2 ">
+          <img
+            class="max-w-full max-h-full"
+            src="../assets/${productClicked.imagenes[1]}"
+            alt=""
+          />
+        </div>
+        <div
+        class="tres w-full h-96 justify-center items-center flex absolute p-2">
+          <img
+            class="max-w-full max-h-full"
+            src="../assets/${productClicked.imagenes[2]}"
+            alt=""
+          />
+        </div>
+        `
         menuColumna()
+        
+      }
+      
+      function showImage () {
+        imagen.forEach((foto) => {
+              if (foto.classList.contains(this.dataset.image)) {
+               foto.style.opacity = 1;
+            } else {
+               foto.style.opacity = 0;
+            }
+          }
+        )
       }
 
       productoColumna.addEventListener("click", menuColumna);

@@ -116,7 +116,11 @@ const productos = [
       titulo: "Medidas",
       tamano: ["NO INFO"],
     },
-    imagenes: ["NO INFO", "NO INFO", "NO INFO"],
+    imagenes: [
+      "fijacion_peek1.jpg",
+      "fijacion_peek2.jpg",
+      "fijacion_peek3.png",
+    ],
   },
   {
     id: "reemplazo_total",
@@ -127,7 +131,11 @@ const productos = [
       titulo: "Medidas",
       tamano: ["NO INFO"],
     },
-    imagenes: ["NO INFO", "NO INFO", "NO INFO"],
+    imagenes: [
+      "fijacion_peek1.jpg",
+      "fijacion_peek2.jpg",
+      "fijacion_peek3.png",
+    ],
   },
   {
     id: "reemplazo_ligamentos",
@@ -138,7 +146,11 @@ const productos = [
       titulo: "Medidas",
       tamano: ["NO INFO"],
     },
-    imagenes: ["NO INFO", "NO INFO", "NO INFO"],
+    imagenes: [
+      "fijacion_peek1.jpg",
+      "fijacion_peek2.jpg",
+      "fijacion_peek3.png",
+    ],
   },
   {
     id: "placas_titanio",
@@ -283,7 +295,11 @@ const productos = [
         tamano: ["NO INFO"],
       },
     ],
-    imagenes: ["NO INFO"],
+    imagenes: [
+      "fijacion_peek1.jpg",
+      "fijacion_peek2.jpg",
+      "fijacion_peek3.png",
+    ],
   },
   {
     id: "cupula_bipolar",
