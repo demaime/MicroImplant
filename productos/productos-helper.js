@@ -29,7 +29,7 @@ function selectItem(
   nombreElem,
   descripcionElem,
   imagenElem,
-  contenedorProductoActual,
+
   listaColumna,
   medidasContainer,
   inicializando
@@ -146,7 +146,7 @@ function init(
         productoActual,
         description,
         imgcontainer,
-        contenedorProductoActual,
+
         menuDeProductos,
         medidasContainer
       )
@@ -157,7 +157,7 @@ function init(
     productoActual,
     description,
     imgcontainer,
-    contenedorProductoActual,
+
     menuDeProductos,
     medidasContainer,
     true
