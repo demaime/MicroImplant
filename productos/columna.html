@@ -158,10 +158,11 @@
       <p id="description-container" class="w-4/6 p-2 text-xl"></p>
       <ul id="medidas-container" class="w-2/6 p-2 text-sm"></ul>
     </div>
+    <script src="./productos-helper.js"></script>
     <script src="../main.js"></script>
     <script src="../catalogo.js"></script>
     <script>
-      const productoColumna = document.querySelector("#producto-columna");
+      const contenedorProductoActual = document.querySelector("#producto-columna");
       const listaColumna = document.querySelector("#lista-columna");
       const productoActual = document.getElementById("producto-actual");
       const imgcontainer = document.getElementById("img-container")
@@ -169,31 +170,15 @@
       const description = document.getElementById("description-container");
       const medidasContainer = document.getElementById("medidas-container");
 
-      init()
+      /*
+      document.addEventListener("click", function (event) {
+        if (!listaColumna.contains(e.target)) {
+          // cerrar
+        }
+      })
+      */
 
-      function actualizarMedidas (elemento, arrMedidas) {
-        elemento.innerHTML = arrMedidas.map(medida => {
-          const items = medida.tamano.map(tamano => `<li>${tamano}</li>`).join('')
-          return `
-            <div class="mb-4">
-              <p>${medida.titulo}</p>
-              <ul class="ml-2">${items}</ul>
-            </div>
-          `
-        }).join('')
-      }
-      
-      function menuColumna() {
-        productoColumna.classList.toggle("opened");
-        listaColumna.style.maxHeight = productoColumna.classList.contains(
-          "opened"
-        )
-          ? "50rem"
-          : 0;
-        listaColumna.style.zIndex = productoColumna.classList.contains("opened")
-          ? "100"
-          : 0;
-      }
+      init()
 
       function selectItem(event) {
         const productId = event.target.data;
@@ -221,7 +206,7 @@
         })
 
         imgcontainer.innerHTML = imgHtml
-        menuColumna()
+        menuColumna(contenedorProductoActual, listaColumna)
         
       }
       
@@ -266,10 +251,13 @@
         });
 
         const itemsLista = Array.from(document.querySelectorAll("#lista-columna li"));
-        productoColumna.addEventListener("click", menuColumna);
+        contenedorProductoActual.addEventListener("click", function () {
+          menuColumna(contenedorProductoActual, listaColumna)
+        });
         itemsLista.forEach((item) => item.addEventListener("click", selectItem));
         slider.forEach(item => item.addEventListener("click", showImage));
       }
+    
     </script>
   </body>
 </html>
