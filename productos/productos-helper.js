@@ -146,7 +146,6 @@ function init(
         productoActual,
         description,
         imgcontainer,
-
         menuDeProductos,
         medidasContainer
       )
@@ -157,7 +156,6 @@ function init(
     productoActual,
     description,
     imgcontainer,
-
     menuDeProductos,
     medidasContainer,
     true
