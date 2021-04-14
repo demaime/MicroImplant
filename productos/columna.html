@@ -163,75 +163,15 @@
     <script src="../catalogo.js"></script>
     <script>
       const contenedorProductoActual = document.querySelector("#producto-columna");
-      const listaColumna = document.querySelector("#lista-columna");
+      const menuDeProductos = document.querySelector("#lista-columna");
       const productoActual = document.getElementById("producto-actual");
       const imgcontainer = document.getElementById("img-container")
       const slider = Array.from(document.querySelectorAll("#slider .but-img"));
       const description = document.getElementById("description-container");
       const medidasContainer = document.getElementById("medidas-container");
 
-      /*
-      document.addEventListener("click", function (event) {
-        if (!listaColumna.contains(e.target)) {
-          // cerrar
-        }
-      })
-      */
-
       init()
-
-      function selectItem(event) {
-        const productId = event.target.data;
-        const productClicked = productos.find(
-          (product) => product.id === productId)
-        productoActual.innerText = productClicked.nombre;
-        description.innerText = productClicked.descripcion;
-
-        actualizarMedidas(medidasContainer, productClicked.medidas)
-
-        let imgHtml = ''
-        const classesByIndex = ['uno', 'dos', 'tres']
-        productClicked.imagenes.forEach((imagen, i) => {
-          imgHtml += `
-            <div 
-              class="${classesByIndex[i]} opacity-${i === 0 ? '1' : '0'} w-full h-96 justify-center items-center flex absolute p-2"
-            >
-              <img
-                class="max-w-full max-h-full"
-                src="../assets/${imagen}"
-                alt=""
-              />
-            </div>
-          `
-        })
-
-        imgcontainer.innerHTML = imgHtml
-        menuColumna(contenedorProductoActual, listaColumna)
-        
-      }
       
-      function showImage (e) {
-        const imagen = Array.from(document.querySelectorAll("#img-container div"));
-        slider.forEach((butImg) => {
-          if (this.dataset.image === butImg.dataset.image) {
-            butImg.classList.add('bg-primary-dark')
-            butImg.classList.remove('bg-gray-400')
-          } else {
-            butImg.classList.remove('bg-primary-dark')
-            butImg.classList.add('bg-gray-400')
-          }
-        })
-        imagen.forEach((foto) => {
-          if (foto.classList.contains(this.dataset.image)) {
-            foto.classList.add('opacity-1')
-            foto.classList.remove('opacity-0')
-          } else {
-            foto.classList.add('opacity-0')
-            foto.classList.remove('opacity-1')
-          }
-        })
-      }
-
       function init () {
         const productoInicial = productos[0]
         productoActual.innerText = productoInicial.nombre;
@@ -246,16 +186,17 @@
             li.onmouseleave = function () {this.style.transform = "scale(1)"}
             li["data"] = producto.id;
             li.innerText = producto.nombre;
-            listaColumna.appendChild(li);
+            menuDeProductos.appendChild(li);
+            
           }
         });
-
-        const itemsLista = Array.from(document.querySelectorAll("#lista-columna li"));
+        const itemsDeLaLista = Array.from(document.querySelectorAll("#lista-columna li"));
         contenedorProductoActual.addEventListener("click", function () {
-          menuColumna(contenedorProductoActual, listaColumna)
+          menuColumna(menuDeProductos)
         });
-        itemsLista.forEach((item) => item.addEventListener("click", selectItem));
-        slider.forEach(item => item.addEventListener("click", showImage));
+        itemsDeLaLista.forEach((item) => item.addEventListener("click", (e) => selectItem(e.target, productoActual, description, imgcontainer, contenedorProductoActual, menuDeProductos, medidasContainer)));
+        slider.forEach(item => item.addEventListener("click", (e) => showImage(e.target, slider)));
+        closeMenu(menuDeProductos, productoActual)
       }
     
     </script>
