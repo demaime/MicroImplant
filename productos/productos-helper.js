@@ -25,15 +25,15 @@ function menuColumna(contenedorLista) {
 }
 
 function selectItem(
-  elemento,
+  productId,
   nombreElem,
   descripcionElem,
   imagenElem,
   contenedorProductoActual,
   listaColumna,
-  medidasContainer
+  medidasContainer,
+  inicializando
 ) {
-  const productId = elemento.data;
   const productClicked = productos.find((product) => product.id === productId);
   nombreElem.innerText = productClicked.nombre;
   descripcionElem.innerText = productClicked.descripcion;
@@ -59,7 +59,7 @@ function selectItem(
   });
 
   imagenElem.innerHTML = imgHtml;
-  menuColumna(listaColumna);
+  if (!inicializando) menuColumna(listaColumna);
 }
 
 function showImage(elem, butSelector) {
@@ -99,6 +99,7 @@ function closeMenu(menu, productoActual) {
 }
 
 function init(
+  categoria,
   contenedorProductoActual,
   menuDeProductos,
   productoActual,
@@ -107,13 +108,16 @@ function init(
   description,
   medidasContainer
 ) {
-  const productoInicial = productos[0];
+  const productosCategoria = productos.filter(
+    (producto) => producto.categoria === categoria
+  );
+  const productoInicial = productosCategoria[0];
   productoActual.innerText = productoInicial.nombre;
   description.innerText = productoInicial.descripcion;
   actualizarMedidas(medidasContainer, productoInicial.medidas);
 
-  productos.forEach((producto) => {
-    if (producto.categoria === "Columna") {
+  productosCategoria.forEach((producto) => {
+    if (producto.categoria === categoria) {
       const li = document.createElement("li");
       li.classList =
         "bg-blue-50 border-t border-blue-300 py-1 font-bold tracking-wide duration-150";
@@ -130,7 +134,7 @@ function init(
     }
   });
   const itemsDeLaLista = Array.from(
-    document.querySelectorAll("#lista-columna li")
+    document.querySelectorAll("#menu-productos li")
   );
   contenedorProductoActual.addEventListener("click", function () {
     menuColumna(menuDeProductos);
@@ -138,7 +142,7 @@ function init(
   itemsDeLaLista.forEach((item) =>
     item.addEventListener("click", (e) =>
       selectItem(
-        e.target,
+        e.target.data,
         productoActual,
         description,
         imgcontainer,
@@ -147,6 +151,16 @@ function init(
         medidasContainer
       )
     )
+  );
+  selectItem(
+    productoInicial.id,
+    productoActual,
+    description,
+    imgcontainer,
+    contenedorProductoActual,
+    menuDeProductos,
+    medidasContainer,
+    true
   );
   slider.forEach((item) =>
     item.addEventListener("click", (e) => showImage(e.target, slider))

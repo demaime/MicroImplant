@@ -104,7 +104,7 @@
       style="box-shadow: 0px 1px 6px rgb(1, 97, 145)"
     >
       <div
-        id="producto-columna"
+        id="producto-categoria"
         class="flex h-20 w-full justify-center text-center items-center text-xl"
         style="font-variant: small-caps"
       >
@@ -113,7 +113,7 @@
       </div>
     </div>
     <ul
-      id="lista-columna"
+      id="menu-productos"
       class="max-h-0 overflow-hidden absolute bg-gray-100 w-full text-center duration-500"
       style="color: rgb(1, 97, 145); font-variant: small-caps; box-shadow: 0px 1px 6px rgb(1, 97, 145)"
     ></ul>
@@ -122,31 +122,6 @@
         id="img-container"
         class="mt-2 h-96 overflow-hidden relative flex w-full"
       >
-        <div 
-          class="uno opacity-1 w-full h-96 justify-center items-center flex absolute p-2"
-        >
-          <img
-            class="max-w-full max-h-full"
-            src="../assets/fijacion_titanio1.jpeg"
-            alt=""
-          />
-        </div>
-        <div 
-        class="dos opacity-0 w-full h-96 justify-center items-center flex absolute p-2 ">
-          <img
-            class="max-w-full max-h-full"
-            src="../assets/fijacion_titanio2.jpg"
-            alt=""
-          />
-        </div>
-        <div
-        class="tres opacity-0 w-full h-96 justify-center items-center flex absolute p-2">
-          <img
-            class="max-w-full max-h-full"
-            src="../assets/fijacion_titanio3.jpg"
-            alt=""
-          />
-        </div>
       </div>
     </div>
     <div id="slider" class="w-full h-8 my-2 flex items-center justify-center">
@@ -162,20 +137,20 @@
     <script src="../main.js"></script>
     <script src="../catalogo.js"></script>
     <script>
-      const contenedorProductoActual = document.querySelector("#producto-columna");
-      const menuDeProductos = document.querySelector("#lista-columna");
+      const contenedorProductoActual = document.querySelector("#producto-categoria");
+      const menuDeProductos = document.querySelector("#menu-productos");
       const productoActual = document.getElementById("producto-actual");
-      const imgcontainer = document.getElementById("img-container")
+      const imgContainer = document.getElementById("img-container")
       const slider = Array.from(document.querySelectorAll("#slider .but-img"));
-      const description = document.getElementById("description-container");
+      const descriptionContainer = document.getElementById("description-container");
       const medidasContainer = document.getElementById("medidas-container");
 
-      init(contenedorProductoActual,
+      init("Columna", contenedorProductoActual,
       menuDeProductos,
       productoActual,
-      imgcontainer,
+      imgContainer,
       slider,
-      description,
+      descriptionContainer,
       medidasContainer)
 
     </script>
