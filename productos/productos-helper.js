@@ -97,3 +97,59 @@ function closeMenu(menu, productoActual) {
     }
   });
 }
+
+function init(
+  contenedorProductoActual,
+  menuDeProductos,
+  productoActual,
+  imgcontainer,
+  slider,
+  description,
+  medidasContainer
+) {
+  const productoInicial = productos[0];
+  productoActual.innerText = productoInicial.nombre;
+  description.innerText = productoInicial.descripcion;
+  actualizarMedidas(medidasContainer, productoInicial.medidas);
+
+  productos.forEach((producto) => {
+    if (producto.categoria === "Columna") {
+      const li = document.createElement("li");
+      li.classList =
+        "bg-blue-50 border-t border-blue-300 py-1 font-bold tracking-wide duration-150";
+      li.onmouseover = function () {
+        this.style.cursor = "pointer";
+        this.style.transform = "scale(1.1)";
+      };
+      li.onmouseleave = function () {
+        this.style.transform = "scale(1)";
+      };
+      li["data"] = producto.id;
+      li.innerText = producto.nombre;
+      menuDeProductos.appendChild(li);
+    }
+  });
+  const itemsDeLaLista = Array.from(
+    document.querySelectorAll("#lista-columna li")
+  );
+  contenedorProductoActual.addEventListener("click", function () {
+    menuColumna(menuDeProductos);
+  });
+  itemsDeLaLista.forEach((item) =>
+    item.addEventListener("click", (e) =>
+      selectItem(
+        e.target,
+        productoActual,
+        description,
+        imgcontainer,
+        contenedorProductoActual,
+        menuDeProductos,
+        medidasContainer
+      )
+    )
+  );
+  slider.forEach((item) =>
+    item.addEventListener("click", (e) => showImage(e.target, slider))
+  );
+  closeMenu(menuDeProductos, productoActual);
+}
