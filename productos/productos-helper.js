@@ -29,7 +29,7 @@ function selectItem(
   nombreElem,
   descripcionElem,
   imagenElem,
-  listaColumna,
+  menuDeProductos,
   medidasContainer,
   inicializando
 ) {
@@ -55,7 +55,7 @@ function selectItem(
     `;
   });
   imagenElem.innerHTML = imgHtml;
-  if (!inicializando) menuProductos(listaColumna);
+  if (!inicializando) menuProductos(menuDeProductos);
 }
 
 function showImage(elem, butSelector) {
@@ -80,12 +80,12 @@ function showImage(elem, butSelector) {
   });
 }
 
-function closeMenu(menu, productoActual) {
+function closeMenu(menu, contenedorProductoActual) {
   document.addEventListener("click", function (e) {
     if (
       menu.classList.contains("opened") &&
       !menu.contains(e.target) &&
-      productoActual !== e.target
+      contenedorProductoActual !== e.target
     ) {
       menu.classList.remove("opened");
       menu.style.maxHeight = 0;
@@ -101,7 +101,7 @@ function init(
   productoActual,
   imgcontainer,
   slider,
-  description,
+  descriptionContainer,
   medidasContainer
 ) {
   const productosCategoria = productos.filter(
@@ -109,7 +109,7 @@ function init(
   );
   const productoInicial = productosCategoria[0];
   productoActual.innerText = productoInicial.nombre + "▼";
-  description.innerText = productoInicial.descripcion;
+  descriptionContainer.innerText = productoInicial.descripcion;
   actualizarMedidas(medidasContainer, productoInicial.medidas);
 
   productosCategoria.forEach((producto) => {
@@ -140,7 +140,7 @@ function init(
       selectItem(
         e.target.data,
         productoActual,
-        description,
+        descriptionContainer,
         imgcontainer,
         menuDeProductos,
         medidasContainer
@@ -150,7 +150,7 @@ function init(
   selectItem(
     productoInicial.id,
     productoActual,
-    description,
+    descriptionContainer,
     imgcontainer,
     menuDeProductos,
     medidasContainer,
@@ -161,4 +161,3 @@ function init(
   );
   closeMenu(menuDeProductos, productoActual);
 }
-document.addEventListener("click", (e) => console.log(e.target));
