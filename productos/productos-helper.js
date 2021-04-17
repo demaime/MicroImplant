@@ -20,7 +20,7 @@ function menuProductos(contenedorLista) {
     ? "50rem"
     : 0;
   contenedorLista.style.zIndex = contenedorLista.classList.contains("opened")
-    ? "100"
+    ? "9"
     : 0;
 }
 
