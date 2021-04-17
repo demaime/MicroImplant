@@ -2,11 +2,11 @@ function actualizarMedidas(elemento, arrMedidas) {
   elemento.innerHTML = arrMedidas
     .map((medida) => {
       const items = medida.tamano
-        .map((tamano) => `<li>${tamano}</li>`)
+        .map((tamano) => `<li>• ${tamano}</li>`)
         .join("");
       return `
       <div class="mb-4">
-        <p>${medida.titulo}</p>
+        <p class= "font-semibold text-sm">${medida.titulo}</p>
         <ul class="ml-2">${items}</ul>
       </div>
     `;
@@ -14,7 +14,7 @@ function actualizarMedidas(elemento, arrMedidas) {
     .join("");
 }
 
-function menuColumna(contenedorLista) {
+function menuProductos(contenedorLista) {
   contenedorLista.classList.toggle("opened");
   contenedorLista.style.maxHeight = contenedorLista.classList.contains("opened")
     ? "50rem"
@@ -29,17 +29,14 @@ function selectItem(
   nombreElem,
   descripcionElem,
   imagenElem,
-
   listaColumna,
   medidasContainer,
   inicializando
 ) {
   const productClicked = productos.find((product) => product.id === productId);
-  nombreElem.innerText = productClicked.nombre;
+  nombreElem.innerText = productClicked.nombre + " " + "▼";
   descripcionElem.innerText = productClicked.descripcion;
-
   actualizarMedidas(medidasContainer, productClicked.medidas);
-
   let imgHtml = "";
   const classesByIndex = ["uno", "dos", "tres"];
   productClicked.imagenes.forEach((imagen, i) => {
@@ -57,9 +54,8 @@ function selectItem(
       </div>
     `;
   });
-
   imagenElem.innerHTML = imgHtml;
-  if (!inicializando) menuColumna(listaColumna);
+  if (!inicializando) menuProductos(listaColumna);
 }
 
 function showImage(elem, butSelector) {
@@ -112,7 +108,7 @@ function init(
     (producto) => producto.categoria === categoria
   );
   const productoInicial = productosCategoria[0];
-  productoActual.innerText = productoInicial.nombre;
+  productoActual.innerText = productoInicial.nombre + "▼";
   description.innerText = productoInicial.descripcion;
   actualizarMedidas(medidasContainer, productoInicial.medidas);
 
@@ -137,7 +133,7 @@ function init(
     document.querySelectorAll("#menu-productos li")
   );
   contenedorProductoActual.addEventListener("click", function () {
-    menuColumna(menuDeProductos);
+    menuProductos(menuDeProductos);
   });
   itemsDeLaLista.forEach((item) =>
     item.addEventListener("click", (e) =>
@@ -165,3 +161,4 @@ function init(
   );
   closeMenu(menuDeProductos, productoActual);
 }
+document.addEventListener("click", (e) => console.log(e.target));

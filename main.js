@@ -1,6 +1,4 @@
-const hamburguer = document.querySelector(".hamburguer");
 const abrirMenu = document.querySelector(".abrirMenu");
-const cerrarMenu = document.querySelector(".cerrarMenu");
 const menu = document.querySelector("#menu");
 
 function openMenu() {

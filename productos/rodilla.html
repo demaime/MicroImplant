@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,111 +13,170 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
     <title>Productos .::MicroIMPLANT::.</title>
   </head>
   <body style="font-family: 'Roboto', sans-serif">
-    <header
-      class="flex w-full h-16 items-center fixed z-10"
-      style="
-        background: linear-gradient(
-          0.15turn,
-          rgb(1, 97, 145),
-          rgb(19, 172, 248)
-        );
-        border-bottom: solid rgb(102, 203, 243) 2px;
-      "
-    >
-      <a href="../home.html"
-        ><div
-          class="h-16 w-16 flex items-center justify-center"
-          style="
-            border-right: double rgb(102, 203, 243) 3px;
-            border-radius: 10px;
-          "
-        >
-          <img class="mx-1 h-11 w-11" src="../assets/logo.png" alt="" /></div
-      ></a>
-      <div class="h-12 text-white text-3xl mx-3">
-        <p>MICRO<strong>IMPLANT</strong></p>
-        <span class="text-xs"><p>Insumos Médicos</p></span>
-      </div>
-      <div
-        class="hamburguer ml-2 h-11 w-10 rounded-sm overflow-hidden flex flex-col ml-auto pr-12"
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+        rel="stylesheet"
+      />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+        rel="stylesheet"
+      />
+      <title>.::MicroIMPLANT::.</title>
+      <link rel="stylesheet" href="../styles.css">
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    </head>
+    <body style="font-family: 'Roboto', sans-serif" class="lg:container mx-auto relative">
+      <header
+        class="absolute top-0 left-0 right-0 w-full z-10 sticky"
+        style="
+          background: linear-gradient(
+            0.15turn,
+            rgb(1, 97, 145),
+            rgb(19, 172, 248)
+          );
+          border-bottom: solid rgb(102, 203, 243) 2px; 
+        "
       >
-        <div class="abrirMenu h-11 w-10 duration-1000">
-          <div class="but1"></div>
-          <div class="but2"></div>
-          <div class="but3"></div>
+      <div class="flex h-16 lg:h-32 items-center">
+        <a href="../home.html"><div
+          class="h-16 w-16 flex items-center justify-center lg:h-32 lg:w-32"
+          style="border-right: double rgb(102, 203, 243) 3px; border-radius: 10px;"
+        >
+          <img id="logo" class="h-11 w-11 lg:h-4/5 lg:w-4/5 duration-500" src="../assets/logo.png" alt="" />
+        </div></a>
+        <div class="h-12 text-white text-3xl mx-3 lg:h-32 lg:text-7xl lg:flex lg:flex-col lg:justify-center"><p>
+          MICRO<strong>IMPLANT</strong></p><span class="text-xs lg:text-2xl lg:ml-1"
+            ><p>Insumos Médicos</p></span
+          >
+        </div>
+        <div class="hamburguer ml-2 h-11 w-10 rounded-sm overflow-hidden flex flex-col ml-auto pr-12 lg:hidden">
+          <div class="abrirMenu h-11 w-10">
+              <div class="but1"></div>
+              <div class="but2"></div>
+              <div class="but3"></div>
+          </div>  
         </div>
       </div>
-    </header>
-    <ul
-      id="menu"
-      class="w-full text-white flex flex-col opacity-90 fixed mt-16 max-h-0 overflow-hidden duration-500 z-10"
-    >
-      <a href="../home.html"
-        ><li
-          class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
-        >
-          HOME
-        </li></a
-      >
-      <a href="../institucional.html"
-        ><li
-          class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
-        >
-          INSTITUCIONAL
-        </li></a
-      >
-      <a href="../productos.html"
-        ><li
-          class="bg-gray-500 h-12 items-center flex pl-2 border-b border-gray-400"
-        >
-          PRODUCTOS
-        </li></a
-      >
-      <a href="../contacto.html"
-        ><li class="bg-gray-800 h-12 items-center flex pl-2">CONTACTO</li></a
-      >
-    </ul>
-    <div class="h-16 w-full"></div>
-    <!--Div que tuve que poner porque header tapa lo que haya debajo (porque es position fixed) pero si le pongo margin o padding al de abajo, mueve el header-->
+        <ul id="menu" class="w-full text-white flex flex-col opacity-90 max-h-0 overflow-hidden duration-500 z-10">
+            <a href="../home.html"><li class="bg-gray-500 h-12 items-center flex pl-2 border-b border-gray-400">HOME</li></a>
+            <a href="../institucional.html"><li
+              class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400"
+            >
+              INSTITUCIONAL
+            </li></a>
+            <a href="../productos.html"><li class="bg-gray-800 h-12 items-center flex pl-2 border-b border-gray-400">PRODUCTOS</li></a>
+            <a href="../contacto.html"><li class="bg-gray-800 h-12 items-center flex pl-2">CONTACTO</li></a>
+        </ul>
+        <nav class="sm:hidden lg:z-10 lg:h-12 lg:w-full lg:bg-gray-700 lg:items-center lg:flex lg:border-b lg:border-blue-300 lg:justify-evenly">
+          <a href="../home.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">HOME</div></a>
+            <a href="../institucional.html"><div class="hidden lg:block lg:text-white lg:tracking-wider"
+            >
+              INSTITUCIONAL
+            </div></a>
+            <a href="../productos.html"><div class="hidden lg:block lg:text-blue-300  lg:tracking-wider"><strong>PRODUCTOS</strong></div></a>
+            <a href="../contacto.html"><div class="hidden lg:block lg:text-white lg:tracking-wider">CONTACTO</div></a>
+        </nav>
+      </header>
     <div
       class="flex items-center justify-between w-full h-8 bg-gray-800 text-blue-300 px-2"
-    >
-      <p class=>Catálogo de Productos</p>
+    > 
+      <p><em>Catálogo de Productos</em></p>
       <a href="../productos.html">
-      <p class="text-xs text-blue-200"><em>Volver al catálogo</em></p></a>
+        <p class="text-xs text-white">Volver al catálogo</p></a
+      >
     </div>
-    <div class="flex items-center justify-center font-semibold h-12 w-full bg-blue-300">
-      <img class="h-8 w-8 mx-2" src="../assets/rodilla.png" alt="">
+    <div
+      class="flex items-center justify-center font-semibold h-12 w-full bg-blue-300"
+    >
+      <img class="h-8 w-8 mx-2" src="../assets/rodilla.png" alt="" />
       RODILLA
     </div>
-    <div class="grid h-auto w-full border-b" style="grid-template-columns: 1fr 3fr;">
-      <div class="bg-gray-300 flex flex-col text-gray-800 text-sm">
-        <div class="p-1">Producto de nombre largo</div>
-        <div class="p-1">Producto 1</div>
-        <div class="p-1">Producto 1</div>
-        <div class="p-1">Producto 1</div>
-        <div class="p-1">Producto con el nombre mas largo de todos</div>
-        <div class="p-1">Producto 1</div>
-        <div class="p-1">Producto 1</div>
-        <div class="p-1">Producto 1</div>
-        <div class="p-1">Producto 1</div>
+    <div
+      class="flex justify-center h-20 w-full border-blue-300"
+      style="box-shadow: 0px 1px 6px rgb(1, 97, 145)"
+    >
+      <div
+        id="producto-categoria"
+        class="flex h-20 w-full justify-center text-center items-center text-xl"
+        style="font-variant: small-caps"
+      >
+        <p id="producto-actual" class="font-bold tracking-wide" style="color: rgb(1, 97, 145)"></p>
       </div>
-      <div class="flex justify-center items-center"><em>📷📷FOTO DEL PRODUCTO📷📷</em></div>
     </div>
-    <div class="text-xs">
-      <p class="p-2 text-blue-900 tracking-wider"><strong>NOMBRE DEL PRODUCTO</strong></p>
-      <p class="px-2 text-justify">Este es un producto que tiene la siguiente descripcion. Aca se pondría todo lo relativo al material, si es importado, que es de primera calidad y toda esa saraza necesaria para ocupar un par de renglones </p>
-      <ul class="p-2">Y aca irian las medidas disponibles:
-        <li class="pl-4">- 0.2</li>
-        <li class="pl-4">- 0.5</li>
-        <li class="pl-4">- 0.75</li>
-      </ul>
-
+    <ul
+      id="menu-productos"
+      class="max-h-0 overflow-hidden absolute bg-gray-100 w-full text-center duration-500"
+      style="color: rgb(1, 97, 145); font-variant: small-caps; box-shadow: 0px 1px 6px rgb(1, 97, 145)"
+    ></ul>
+    <div class="flex w-full h-96">
+      <div
+        id="img-container"
+        class="mt-2 h-96 overflow-hidden relative flex w-full"
+      >
+        <div 
+          class="uno opacity-1 w-full h-96 justify-center items-center flex absolute p-2"
+        >
+          <img
+            class="max-w-full max-h-full"
+            src="../assets/fijacion_titanio1.jpeg"
+            alt=""
+          />
+        </div>
+        <div 
+        class="dos opacity-0 w-full h-96 justify-center items-center flex absolute p-2 ">
+          <img
+            class="max-w-full max-h-full"
+            src="../assets/fijacion_titanio2.jpg"
+            alt=""
+          />
+        </div>
+        <div
+        class="tres opacity-0 w-full h-96 justify-center items-center flex absolute p-2">
+          <img
+            class="max-w-full max-h-full"
+            src="../assets/fijacion_titanio3.jpg"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
+    <div id="slider" class="w-full h-8 my-2 flex items-center justify-center">
+      <button data-image="uno" class="but-img bg-primary-dark focus:outline-none rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></button>
+      <button data-image="dos" class="but-img focus:outline-none rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></button>
+      <button data-image="tres" class="but-img focus:outline-none rounded-full h-3 w-3 bg-gray-400 duration-150 mx-3"></button>
+    </div>
+    <div class="p-2 w-full flex">
+      <p id="description-container" class="w-4/6 p-2 text-xl"></p>
+      <ul id="medidas-container" class="w-2/6 p-2 text-sm"></ul>
+    </div>
+    <script src="./productos-helper.js"></script>
     <script src="../main.js"></script>
+    <script src="../catalogo.js"></script>
+    <script>
+      const contenedorProductoActual = document.querySelector("#producto-categoria");
+      const menuDeProductos = document.querySelector("#menu-productos");
+      const productoActual = document.getElementById("producto-actual");
+      const imgContainer = document.getElementById("img-container")
+      const slider = Array.from(document.querySelectorAll("#slider .but-img"));
+      const descriptionContainer = document.getElementById("description-container");
+      const medidasContainer = document.getElementById("medidas-container");
+
+      init("Rodilla", contenedorProductoActual,
+      menuDeProductos,
+      productoActual,
+      imgContainer,
+      slider,
+      descriptionContainer,
+      medidasContainer)
+
+    </script>
   </body>
 </html>
