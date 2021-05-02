@@ -90,7 +90,7 @@
     > 
       <p><em>Catálogo de Productos</em></p>
       <a href="../productos.html">
-        <p class="text-xs text-white">Volver al catálogo</p></a
+        <p class="text-xs text-white tracking-wider font-semibold">❮ - Volver al catálogo</p></a
       >
     </div>
     <div
@@ -99,9 +99,35 @@
       <img class="h-8 w-16   mx-2" src="../assets/osteo.png" alt="" />
       OSTEOSINTESIS
     </div>
-    <strong class="h-96 w-full flex items-center justify-center text-3xl text-blue-500"> SITIO EN DESARROLLO</strong>
-    <script src="./productos-helper.js"></script>
+ <div id="producto-categoria"
+      class="flex justify-center h-20 w-full border-blue-300 text-xl"
+      style="box-shadow: 0px 1px 6px rgb(1, 97, 145); font-variant: small-caps"
+    >
+      <p id="producto-actual" class="font-bold tracking-wide text-lg w-full flex justify-center items-center" style="color: rgb(1, 97, 145)"></p>
+    </div>
+    <ul
+      id="menu-productos"
+      class="max-h-0 overflow-hidden absolute bg-gray-100 w-full text-center duration-500"
+      style="color: rgb(1, 97, 145); font-variant: small-caps; box-shadow: 0px 1px 6px rgb(1, 97, 145)"
+    ></ul>
+    <div class="flex w-full h-96">
+      <div
+        id="img-container"
+        class="mt-2 h-96 overflow-hidden relative flex w-full"
+      >
+      </div>
+    </div>
+    <div id="slider" class="w-full h-8 my-2 flex items-center justify-center shadow-sm">
+      <button data-image="uno" class="but-img bg-primary-dark focus:outline-none rounded-full h-4 w-4 bg-gray-400 duration-150 mx-4"></button>
+      <button data-image="dos" class="but-img focus:outline-none rounded-full h-4 w-4 bg-gray-400 duration-150 mx-4"></button>
+      <button data-image="tres" class="but-img focus:outline-none rounded-full h-4 w-4 bg-gray-400 duration-150 mx-4"></button>
+    </div>
+    <div class="p-2 w-full flex">
+      <p id="description-container" class="w-4/6 p-2 text-lg lg:text-3xl "></p>
+      <ul id="medidas-container" class="w-2/6 p-2 text-sm border-l border-gray-100"></ul>
+    </div>
     <script src="../main.js"></script>
+    <script src="./productos-helper.js"></script>
     <script src="../catalogo.js"></script>
     <script>
       const contenedorProductoActual = document.querySelector("#producto-categoria");
@@ -112,7 +138,7 @@
       const descriptionContainer = document.getElementById("description-container");
       const medidasContainer = document.getElementById("medidas-container");
 
-      init("Rodilla", contenedorProductoActual,
+      init("Osteo", contenedorProductoActual,
       menuDeProductos,
       productoActual,
       imgContainer,

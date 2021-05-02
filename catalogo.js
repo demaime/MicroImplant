@@ -131,6 +131,20 @@ const productos = [
     imagenes: ["no_dispo.png"],
   },
   {
+    id: "sistema_mis",
+    categoria: "Columna",
+    nombre: "Sistema MIS",
+    descripcion:
+      "Retractor tubular MIS para laminectomía. Instrumental ideal para la cirugía lumbar mínimamente invasiva.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: ["sistema_mis1.png", "sistema_mis2.jpg", "sistema_mis3.jpg"],
+  },
+  {
     id: "reemplazo_total",
     categoria: "Rodilla",
     nombre: "Reemplazo total",
@@ -241,7 +255,7 @@ const productos = [
     categoria: "Cadera",
     nombre: "Prótesis tipo Charnley",
     descripcion:
-      "Reemplazo total de Cadera: son producidas en acero inoxidable austenínico y responden a especificaciones internacionales relativas a los aceros usados en implantes para huesos. El diámtro standard y universal de las cabezas es de 22,22mm y su esfericidad es virtualmente perfecta debido a su rectificado y su pulido final.",
+      "Reemplazo total de Cadera: son producidas en acero quirúrgico y responden a especificaciones internacionales relativas a los aceros usados en implantes para huesos. El diámtro standard y universal de las cabezas es de 22,22mm y su esfericidad es virtualmente perfecta debido a su rectificado y su pulido final.",
     medidas: [
       { titulo: "Tipo", tamano: ["Standard", "Reforzado", "Ultrafino"] },
       { titulo: "Cuello", tamano: ["Corto", "Medio", "Largo", "Extra largo"] },
@@ -318,5 +332,153 @@ const productos = [
       "cupula_bipolar2.jpg",
       "cupula_bipolar3.jpg",
     ],
+  },
+  {
+    id: "placa_clavicula",
+    categoria: "Osteo",
+    nombre: "Placa p/ Clavícula en Titanio",
+    descripcion:
+      "Placas para solucionar las fracturas del tercio medio y distal de la clavícula. Son placas de titanio de muy bajo perfil, estas pueden ser mediales, distales o anteriores. Son premoldeadas para semejar la S que forma la clavícula.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: [
+      "placa_clavicula1.png",
+      "placa_clavicula2.png",
+      "placa_clavicula3.jpeg",
+    ],
+  },
+  {
+    id: "placas_ocho",
+    categoria: "Osteo",
+    nombre: "Placa pediátrica en 8",
+    descripcion:
+      "Placa pediátrica en 8 con dos orificios o cuatro , utilizada en fracturas pediátricas de cóndilo femoral y tibial pediátrico.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: ["placa_ocho1.jpg", "placa_ocho2.jpeg", "placa_ocho3.jpg"],
+  },
+  {
+    id: "placas_tibia",
+    categoria: "Osteo",
+    nombre: "Placa anatómica p/ tibia",
+    descripcion:
+      "Esta placa se fabrica en acero y titano; cuenta con un perfil de cuerpo de contacto limitado, agujeros combinados en el cuerpo y orificios para tornillos de bloqueo en la cabeza",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: ["placa_tibia1.jpg", "placa_tibia2.jpg", "placa_tibia3.png"],
+  },
+  {
+    id: "placas_acromio",
+    categoria: "Osteo",
+    nombre: "Placa acromioclavicular",
+    descripcion:
+      "Sistema de fijación con estabilidad angular para fracturas de la clavícula lateral y lesiones de la articulación acromioclavicular.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: [
+      "placa_acromio1.jpeg",
+      "placa_acromio2.jpeg",
+      "placa_acromio3.jpeg",
+    ],
+  },
+  {
+    id: "placas_dcp",
+    categoria: "Osteo",
+    nombre: "Placa DCP bloqueada - Titanio",
+    descripcion:
+      "Placa de Compresión Dinámica (DCP) para reducción de fracturas de miembro inferior y superior.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: ["placa_dcp1.jpg", "placa_dcp2.png", "placa_dcp3.png"],
+  },
+  {
+    id: "placas_perone",
+    categoria: "Osteo",
+    nombre: "Placa peroné distal anatómica",
+    descripcion:
+      "Placa de titanio premoldeada de ajuste anatómico con agujeros combinados. Las muescas presentes en su cuerpo permiten doblarla lateralmente para adaptarla a las características anatómicas individuales del peroné.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: ["placa_perone1.jpg", "placa_perone2.jpg", "placa_perone3.png"],
+  },
+  {
+    id: "placas_pilon",
+    categoria: "Osteo",
+    nombre: "Placa p/ pilón tibial",
+    descripcion:
+      "Placas utilizadas en fracturas del pilón tibial, que comprenden fracturas de la extremidad distal de la tibia, con progresión a la articulación del tobillo.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: ["placa_pilon1.png", "placa_pilon2.jpg", "placa_pilon3.jpg"],
+  },
+  {
+    id: "placas_lambda",
+    categoria: "Osteo",
+    nombre: "Placa lambda p/ pie ",
+    descripcion:
+      "Placa lambda bloqueada con el uso de tornillos bloqueados. Los agujeros en ángulo y ascendentes soportan la apófisis menor del calcáneo y proporcionan un mejor apoyo de la superficie articular calcáneoastragalina.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: ["placa_lambda1.jpg", "placa_lambda2.jpeg", "placa_lambda3.jpg"],
+  },
+  {
+    id: "placas_humero",
+    categoria: "Osteo",
+    nombre: "Placas miembro superior",
+    descripcion:
+      "Placas húmero distal, olecranón y paleta humeral. Están contorneadas anatómicamente para solucionar las fracturas de forma tal que permiten el montaje paralelo y perpendicular.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: ["placa_humero1.jpg", "placa_humero2.jpg", "placa_humero3.png"],
+  },
+  {
+    id: "clavos_gamma",
+    categoria: "Osteo",
+    nombre: "Clavos gamma",
+    descripcion:
+      "En acero y titanio. Reduce el brazo de palanca entre las fuerzas que actúan a través de la cadera y el eje mecánico del implante, mejorando las condiciones de solicitación mecánica del mismo y, por tanto, su resistencia a la fatiga del material.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Varias"],
+      },
+    ],
+    imagenes: ["clavos_gamma1.jpg", "clavos_gamma2.jpg", "clavos_gamma3.jpg"],
   },
 ];
