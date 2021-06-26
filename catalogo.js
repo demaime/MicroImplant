@@ -251,6 +251,20 @@ const productos = [
     imagenes: ["parche1.jpg", "parche2.png", "parche3.jpg"],
   },
   {
+    id: "sonda_pic",
+    categoria: "Neuro",
+    nombre: "Sonda intraparenquimatosa de Pic",
+    descripcion:
+      "Mide la presión intraparenquimatosa. Se coloca en el parénquima mediante un agujero de trépano.",
+    medidas: [
+      {
+        titulo: "Medidas",
+        tamano: ["Estándar", "Grande"],
+      },
+    ],
+    imagenes: ["sonda_pic1.jpg", "sonda_pic2.jpg", "sonda_pic3.jpg"],
+  },
+  {
     id: "protesis_charnley",
     categoria: "Cadera",
     nombre: "Prótesis tipo Charnley",
@@ -306,14 +320,15 @@ const productos = [
     id: "cotilo_judet",
     categoria: "Cadera",
     nombre: "Cotilos tipo Judet",
-    descripcion: "NO INFO",
+    descripcion:
+      "Cúpula con cabeza incorporada retentiva para patologías especiales cementado.",
     medidas: [
       {
-        titulo: "NO INFO",
-        tamano: ["NO INFO"],
+        titulo: "Diámetro",
+        tamano: ["45 mm.", "50 mm.", "55 mm."],
       },
     ],
-    imagenes: ["no_dispo.png"],
+    imagenes: ["cotilo_judet1.jpg", "cotilo_judet2.jpg", "cotilo_judet3.png"],
   },
   {
     id: "cupula_bipolar",
@@ -342,7 +357,7 @@ const productos = [
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["Varias"],
+        tamano: ["de 5 a 7 orificios", "Largo: de 96mm. a 120mm."],
       },
     ],
     imagenes: [
@@ -359,8 +374,8 @@ const productos = [
       "Placa pediátrica en 8 con dos orificios o cuatro , utilizada en fracturas pediátricas de cóndilo femoral y tibial pediátrico.",
     medidas: [
       {
-        titulo: "Medidas",
-        tamano: ["Varias"],
+        titulo: "Largo",
+        tamano: ["17 mm."],
       },
     ],
     imagenes: ["placa_ocho1.jpg", "placa_ocho2.jpeg", "placa_ocho3.jpg"],
@@ -374,7 +389,7 @@ const productos = [
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["Varias"],
+        tamano: ["de 4 a 16 orificios", "Largo: de 96mm. a 252mm."],
       },
     ],
     imagenes: ["placa_tibia1.jpg", "placa_tibia2.jpg", "placa_tibia3.png"],
@@ -388,7 +403,7 @@ const productos = [
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["Varias"],
+        tamano: ["de 2 a 4 orificios", "de 59mm. a 79mm."],
       },
     ],
     imagenes: [
@@ -406,7 +421,7 @@ const productos = [
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["Varias"],
+        tamano: ["de 4 a 14 orificios", "en Titanio o Acero"],
       },
     ],
     imagenes: ["placa_dcp1.jpg", "placa_dcp2.png", "placa_dcp3.png"],
@@ -420,7 +435,7 @@ const productos = [
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["Varias"],
+        tamano: ["de 5 a 9 orificios", "de 90mm. a 140mm."],
       },
     ],
     imagenes: ["placa_perone1.jpg", "placa_perone2.jpg", "placa_perone3.png"],
@@ -434,7 +449,7 @@ const productos = [
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["Varias"],
+        tamano: ["de 4 a 16 orificios", "de 96mm. a 260mm."],
       },
     ],
     imagenes: ["placa_pilon1.png", "placa_pilon2.jpg", "placa_pilon3.jpg"],
@@ -448,7 +463,7 @@ const productos = [
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["Varias"],
+        tamano: ["Chica", "Mediana", "Grande", "Izquierda y Derecha"],
       },
     ],
     imagenes: ["placa_lambda1.jpg", "placa_lambda2.jpeg", "placa_lambda3.jpg"],
@@ -462,7 +477,7 @@ const productos = [
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["Varias"],
+        tamano: ["de 4 a 18 orificios"],
       },
     ],
     imagenes: ["placa_humero1.jpg", "placa_humero2.jpg", "placa_humero3.png"],
@@ -475,8 +490,12 @@ const productos = [
       "En acero y titanio. Reduce el brazo de palanca entre las fuerzas que actúan a través de la cadera y el eje mecánico del implante, mejorando las condiciones de solicitación mecánica del mismo y, por tanto, su resistencia a la fatiga del material.",
     medidas: [
       {
-        titulo: "Medidas",
-        tamano: ["Varias"],
+        titulo: "Angulaciones",
+        tamano: [
+          "Cortos: 125°, 130° y 135°",
+          "Largos: 130°",
+          "de 340mm. a 400mm.",
+        ],
       },
     ],
     imagenes: ["clavos_gamma1.jpg", "clavos_gamma2.jpg", "clavos_gamma3.jpg"],
