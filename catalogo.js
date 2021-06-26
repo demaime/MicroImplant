@@ -106,7 +106,7 @@ const productos = [
   {
     id: "celda",
     categoria: "Columna",
-    nombre: "Celda Mesh - Reemplazo Vertical",
+    nombre: "Celda Mesh - Reemplazo Vertebral",
     descripcion:
       "Realizadas en titanio quirúrgico en una sola pieza, destinadas a reemplazo de cuerpo vertebral cervical, dorsal ó lumbar.",
     medidas: [
