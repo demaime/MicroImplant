@@ -371,7 +371,7 @@ const productos = [
     categoria: "Osteo",
     nombre: "Placa pediátrica en 8",
     descripcion:
-      "Placa pediátrica en 8 con dos orificios o cuatro , utilizada en fracturas pediátricas de cóndilo femoral y tibial pediátrico.",
+      "Placa pediátrica en 8 con dos orificios, utilizada en fracturas pediátricas de cóndilo femoral y tibial pediátrico.",
     medidas: [
       {
         titulo: "Largo",
