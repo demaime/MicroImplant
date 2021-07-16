@@ -118,19 +118,6 @@ const productos = [
     imagenes: ["celda1.png", "celda2.jpg", "celda3.jpg"],
   },
   {
-    id: "sustituto_oseo",
-    categoria: "Columna",
-    nombre: "Sustituto Óseo en granulos",
-    descripcion: "NO INFO",
-    medidas: [
-      {
-        titulo: "Medidas",
-        tamano: ["NO INFO"],
-      },
-    ],
-    imagenes: ["no_dispo.png"],
-  },
-  {
     id: "sistema_mis",
     categoria: "Columna",
     nombre: "Sistema MIS",
@@ -148,27 +135,37 @@ const productos = [
     id: "reemplazo_total",
     categoria: "Rodilla",
     nombre: "Reemplazo total",
-    descripcion: "NO INFO",
+    descripcion:
+      "Contamos con 5 medidas de femoral izquierdo y derecho pulido espejo con posibilidad de agregar vastagos de revisión.",
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["NO INFO"],
+        tamano: ["2", "4", "6", "8", "10"],
       },
     ],
-    imagenes: ["no_dispo.png"],
+    imagenes: [
+      "rodilla_total1.jpg",
+      "rodilla_total2.png",
+      "rodilla_total3.png",
+    ],
   },
   {
-    id: "reemplazo_ligamentos",
+    id: "rodilla_parcial",
     categoria: "Rodilla",
-    nombre: "Reemplazo de ligamentos",
-    descripcion: "NO INFO",
+    nombre: "Reemplazo parcial",
+    descripcion:
+      "Tres resecciones planas y dos agujeros de clavija proporcionan una interfaz de cemento uniforme y congruente.",
     medidas: [
       {
         titulo: "Medidas",
-        tamano: ["NO INFO"],
+        tamano: ["3", "4", "5", "6", "7"],
       },
     ],
-    imagenes: ["no_dispo.png"],
+    imagenes: [
+      "rodilla_parcial1.jpg",
+      "rodilla_parcial2.jpg",
+      "rodilla_parcial3.jpg",
+    ],
   },
   {
     id: "placas_titanio",
@@ -190,7 +187,7 @@ const productos = [
     descripcion:
       "Microplacas de fijación craneal. Utilizadas para cierre de orificios de trepanación.",
     medidas: [{ titulo: "Diámetros", tamano: ["12 mm", "16 mm", "20 mm"] }],
-    imagenes: ["placas_burr1.png", "placas_burr2.png", "placas_burr3.png"],
+    imagenes: ["placas_burr1.png", "placas_burr2.png", "placas_burr3.jpg"],
   },
   {
     id: "mallas",
@@ -234,7 +231,11 @@ const productos = [
         tamano: ["Diseñado a medida"],
       },
     ],
-    imagenes: ["no_dispo.png"],
+    imagenes: [
+      "sistema_metil1.png",
+      "sistema_metil2.jpeg",
+      "sistema_metil3.jpg",
+    ],
   },
   {
     id: "parche",
